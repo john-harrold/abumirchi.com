@@ -1,0 +1,8 @@
+---
+title: "Your Document"
+bibliography: references.bib
+csl: chicago-author-date.csl
+link-citations: false
+---
+
+{{< include cv.qmd >}}

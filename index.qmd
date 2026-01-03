@@ -1,0 +1,26 @@
+---
+title: "John Harrold"
+subtitle: "Mathmagician | Theoretical Biologist"
+image: profile.jpg
+about: # https://quarto.org/docs/websites/website-about.html
+  # https://quarto.org/docs/websites/website-about.html#templates
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/john-harrold
+    - icon: bluesky
+      text: bluesky
+      href: https://bsky.app/profile/abumirchi.com
+---
+
+::: {style="text-align: left;"}
+
+Currently a Senior Director of Pharmacometrics at Pfizer where my focus is on the use of modeling and simulation to support the development of therapeutics. I’m also interested in the development modeling and simulation tools to automate workflows and facilitate interactions between modelers and non-modelers (bench scientists, clinicians, business development, etc).
+
+I received my Ph.D in chemical engineering at the University of Pittsburgh where I developed PKPD models to use in dose regimen design. After graduation I spent two years as a Peace Corps Volunteer teaching biology, chemistry and physics at the National University of Samoa. 
+
+Upon returning to the United States I became a postdoctoral fellow at the Center for Protein Therapeutics in the Pharmaceutical Sciences Department at SUNY Buffalo. As a postdoc I focused on the development of systems pharmacology models of combination therapy for oncology.
+
+I have since worked in industry for over a fifteen years. First at Pfizer, then Amgen, off to Seagen, and back at Pfizer again. I have gained experience using modeling and simulation to support projects ranging from early discovery, IND submission, sBLA filings, and product life-cycle support. 
+:::

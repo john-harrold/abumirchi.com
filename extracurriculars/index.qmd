@@ -1,0 +1,64 @@
+---
+title: Pharmacometrics Analysis Tools and Workflows 
+format:
+  html:
+    css: /resources/styles.css
+---
+
+For fun I develop tools, mostly in R for analyizing PK/PD data. Currently I maintain the following R packages:
+
+::: {.flex}
+<figure>
+  <a href="https://r.ubiquity.tools" target="_blank">
+    <img src="images/ubiquity_hex.png" width="150">
+  </a>
+  <figcaption>r.ubiquity.tools</figcaption>
+</figure>
+
+When I started working in industry I noticed that there were several different kinds of modeling tools being used. I was using Matlab at the time and it was difficult to work with anyone using other tools like Adapt or R. So I created ubiquity as a set of scritps that would read in a file that defined a system of ODEs and then automatically translate that into inputs for several different modeling tools: Matlab (m-file and C), Fortran, R (script and C), mrgsolve, etc. The ubiquity R package is an implementation of these scripts that provides a workflow for simulation, naive-pooled parameter estimation, reporting, etc. It will create templates for those analyses as well as a customizable stand-alone Shiny app for your model. 
+:::
+
+::: {.flex}
+
+This ruminate package is an attempt to wrap commonly used pharmacometrics tools in shiny modules. The goal is to make these tools available to people who have limited programming experience. It generates code that users can use as a starting point for an analysis or to learn how to use a specic tool. Currently it has support for data wranling (dplyr, tidyr), figure generation (ggplot), non-compartmental analysis (PKNCA), and population simulations (rxode2). You can save and load your analysis, create workflows, generate reports (Word, PowerPoing and Excel) as well as generate a script to allow you go create validatable analyses independent of the app.
+
+<figure>
+  <a href="https://ruminate.ubiquity.tools" target="_blank">
+    <img src="images/ruminate_hex.png" width="150">
+  </a>
+  <figcaption>ruminate.ubiquity.tools</figcaption>
+</figure>
+:::
+
+::: {.flex}
+<figure>
+  <a href="https://formods.ubiquity.tools" target="_blank">
+    <img src="images/formods_hex.png" width="150">
+  </a>
+  <figcaption>formods.ubiquity.tools</figcaption>
+</figure>
+
+I developed quite a few Shiny apps and I realized that I was doing the same tasks over and over again. I built formods in order standardize how I created Shiny modules, to provide modules for common tasks I perform, and to act as a basis for creating other modules. The ruminate package is based on formods. 
+:::
+
+::: {.flex}
+The officer package provides extensive methods for accessing, creating, and modifying both Word and PowerPoint documents.  The purpose of onbrand is to provide an abstraction layer where template details are mapped to human-readable names.  These human-readable names combined with the mapping information - in a template-specific yaml file - provides a systematic method to script support for different Word of PowerPoint templates. Which means, the same workflow will support multiple outputs. 
+
+<figure>
+  <a href="https://onbrand.ubiquity.tools" target="_blank">
+    <img src="images/onbrand_hex.png" width="150">
+  </a>
+  <figcaption>onbrand.ubiquity.tools</figcaption>
+</figure>
+:::
+
+::: {.flex}
+<figure>
+  <a href="https://nlmixr2.github.io/nlmixr2rpt" target="_blank">
+    <img src="images/nlmixr2rpt_hex.png" width="150">
+  </a>
+  <figcaption>nlmixr2.github.io/nlmixr2rpt</figcaption>
+</figure>
+
+I'm extremely lucky to work on the nlmixr2 team. One of the things I want to do there is to make it easier to use nlmixr2 in workflows within organizations. One thing we often have to do is document our analyses. The nlmixr2rpt package provides functions to generate reports (Word & PowerPoint) from templates. Say when you develop TGI models you use the same figures and tables each time just the name of the compound changes. You can create a template for your TGI models and tweak it when necessary. It sits on top of the onbrand package to allow you to easily swich over your document templates when they changge. 
+:::

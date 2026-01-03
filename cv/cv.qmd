@@ -1,0 +1,205 @@
+# Work Experience
+
+## Seagen (2020-2024)
+
+### Director of Quantitative Pharmacology and Disposition (2020-2024)
+
+*Manager, platform model development, translational modeling support, and team building*
+
+- Created workflows to automate the analysis and reporting of non-GLP studies.
+- Developed junior scientists in a growing group: created and ran training sessions for R and modeling and simulation tools; provided mentorship and career guidance.
+- Acted as a project team representative for preclinical programs.
+- Provided modeling and simulation support for projects and platforms from discovery through development.
+- Created validated NONMEM environment used by the quantitatively pharmacology group for regulatory submissions.
+- Authored module 2.6.4 and study reports for IND submissions.
+- Clinical pharmacology representative for early stage programs.
+
+## Amgen (2013-2020)
+
+### Preclinical Director, Discovery & Translational Sciences, PKDM, (2019-2020)
+
+
+### Principal Scientist, PKDM, San Francisco, Ca (2016-2019)
+
+*Manager, platform model development, and translational modeling support*
+
+- Managed direct reports.
+- Responsible for module 2.6.4 in INDs for immune-oncology programs.
+- Project  team  representative  typically  supporting  8-12  programs  in  oncology  and  metabolic  disorders  from  early discovery through FIH.
+- Supported product life-cycle management by evaluating feasibility of new indications and development of new molecules to support franchises.
+- Developed modeling tools to guide determination of antibody design goals for Therapeutic Discovery.
+- Automated analysis and reporting of common PKDM-related tasks (non-compartmental analysis,  GLP-tox study design, etc.) run completely in free software (R) with web-based interfaces (Shiny).
+- Created workshop in R focusing on software and analysis techniques in the context of preclinical drug development.
+
+### Senior Scientist, Medical Sciences (2013-2016)
+
+*Translational modeling support*
+
+- Provided the modeling support to combine indication specific parameters in non-human primates with human response to G-CSF to identify dosing regimens to support sBLAs for Acute Radiation Syndrome for Neupogen and Neulasta using the animal rule.
+- Mentored new project representatives in PKDM and CPMS with a focus on developing preclinical programs to support clinical advancement.
+- Managed and coordinated the outsourcing of project components to bring new knowledge and capabilities in house and make filing deadlines.
+- Developed translational modeling and simulation strategies for FIH dose projections to identify drugability liabilities.
+
+## Pfizer (2010-2013)
+
+### Principal Scientist, Systems Pharmacology (2010-2013)
+
+Pfizer Inc, Pharmacokinetics Dynamics and Metabolism (PDM), Andover/Cambridge (2010-2013)
+
+*Provide modeling support for drug candidates from early discovery through Phase I*
+
+- Incorporation of in vitro and in vivo data into systemic models of drug disposition and efficacy on indications spanning the  Inflammatory  &  Autoimmunity,  and  Orphan  &  Genetic  Diseases  Research  Units  as  well  as  the  Centers  for Therapeutic Innovation (Boston and La Jolla).
+-  Provided modeling and simulation support to 15 project teams including: experimental design for parameter identification; linking physiology and pharmacology to provide comparative analysis of competitor compounds (both approved and in development) to ensure differentiability; analysis of different strategies to guide project teams in deciding which modality, technology, etc. to employ.
+-Developed a model generation system allowing description of models with simple text files that could then be used to create models in several formats (Matlab, ADAPT,  Monolix, Berkeley Madonna, etc.) this included:  a deployable GUI to be used by project teams, PDM project representatives, and analytical scientists; facilitated the transfer of models to the Clinical Pharmacology group when the project moves forward; makes models available to others within PDM in languages they are familiar with.
+- Created tools for bioanalytical scientists to promote assay development by quantifying aspects such as the effect of sample impurities on measurements, characterizing anti-drug antibody response, and the affinity and concentration of neutralizing antibodies.
+- Participated in due diligence teams by evaluating preclinical and clinical data identifying risks associated with in- licensing and asset acquisition.
+- Mentored interns, both within PDM and in the clinical pharmacology group, developing systems models to support projects in both early stage development as well as compounds currently in the clinic.
+
+## Center for Protein Therapeutics, Pharmaceutical Sciences Department, SUNY Buffalo (2008-2010)
+
+### Postdoctoral Fellow 
+
+*Developed multi-scale PKPD models of combination therapy for monoclonal antibody systems*
+
+- Developed qualitative and quantitative models of signal transduction in B-cell lymphomas based on in vitro CD20 agonist data.
+- Created mechanistic PKPD model of single agent efficacy in mice that when modulated by the signal transduction model was capable of predicting the synergistic effects of two different combination regimens.
+- Mentored and trained graduate students in various aspects of modeling and simulation associated with PKPD systems.
+
+## US State Department, Peace Corps (2005-2007)
+
+### Peace Corps Volunteer in Samoa
+
+*Visiting lecturer in the Science Department at the National University of Samoa*
+
+- Developed the curriculum for current courses in cellular and molecular biology, plant and animal physiology, and environmental chemistry.
+- Created new upper level physics courses in environmental physics and energy supplies which complemented the current
+-     program in environmental science and allowed the creation of physics minor.
+- Provided training and teaching material to secondary school biology teachers preparing highschool level students for regional qualifying exams.
+
+## University of Pittsburgh, Department of Chemical Engineering (2000-2005)
+
+### Doctoral Candidate, Advisor: Prof. Robert S. Parker
+
+*Model--Based Design of Cancer Chemotherapy Treatment Schedules*
+
+- Developed  nonlinear  pharmacokinetic  and  pharmacodynamic  models  of  9-Nitrocamptothecin  in  severe  combined immunodeficient (SCID) mice bearing subcutaneously implanted HT29 human colon xenografts.
+- Designed a control algorithm which balanced the need to reduce tumor burden and avoid toxic side effects without violating clinical constraints to provide clinically relevant cancer chemotherapy drug schedule.
+- Ensured clinical relevance of results by interacting regularly with collaborators from several fields including clinical oncologists, animal pharmacologists, and technicians.
+
+## University of Arkansas, Fayetteville AR, Department of Chemical Engineering (1998-2000)
+
+### Graduate Student Researcher, Advisor: Prof. Robert R. Beitle
+
+*Using Optical Tweezers to Determine the Suitability of Chromatography Packing*
+
+- Created actuators by covalently anchoring proteins to the surface of chemically active microspheres.
+- Designed a methodology to rapidly evaluate the suitability of chromatography packing while minimizing the amount of protein required for the evaluations.
+- Methodology refined to minimize the economic costs associated with developing protein purification procedures for expensive therapeutic proteins.
+
+# Education
+
+Ph.D., Chemical Engineering, University of Pittsburgh, Pittsburgh, PA August 2005
+
+M.S., Chemical Engineering, University of Arkansas, Fayetteville, AR August 2000
+
+B.S., Chemical Engineering, University of Arkansas, Fayetteville, AR August 1998
+
+# Tool Development
+
+Develop and maintain the ubiquity modeling and simulation tools to support model development and deployment in heterogeneous environments (2014-present).
+
+* Web:         [https://ubiquity.tools](https://ubiquity.tools)
+* Publication: [https://doi.org/10.1007/s10928-014-9352-6](https://doi.org/10.1007/s10928-014-9352-6)
+* GitHub:      [https://github.com/john-harrold/ubiquity-pkpd](https://github.com/john-harrold/ubiquity-pkpd)
+
+Maintain the `{ubiqiuty}` R package, a complete modeling and simulation workflow to support preclinical and translational drug development (2017-present). 
+
+* Web:         [https://r.ubiquity.tools](https://r.ubiquity.tools)
+* CRAN:        [https://CRAN.R-project.org/package=ubiquity](https://CRAN.R-project.org/package=ubiquity)
+* GitHub:      [https://github.com/john-harrold/ubiquity](https://github.com/john-harrold/ubiquity)
+
+ Maintain the `{onbrand}` R package, Automated reporting in Word and PowerPoint can require customization for each organizational template (2020-present).
+
+* Web:          [https://onbrand.ubiquity.tools](https://onbrand.ubiquity.tools)
+* CRAN:         [https://CRAN.R-project.org/package=onbrand](https://CRAN.R-project.org/package=onbrand)
+* GitHub:       [https://github.com/john-harrold/onbrand](https://github.com/john-harrold/onbrand)
+
+ Maintain the `{nlmixr2rpt}` R package, Generate reporting workflows around `{nlmixr2}` analyses with outputs in Word and PowerPoint (2020-present).
+
+ * Web:          [https://nlmixr2rpt.ubiquity.tools](https://nlmixr2rpt.ubiquity.tools)
+ * CRAN:         [https://CRAN.R-project.org/package=nlmixr2rpt](https://CRAN.R-project.org/package=nlmixr2rpt)
+ * GitHub:       [https://github.com/john-harrold/nlmixr2rpt](https://github.com/john-harrold/nlmixr2rpt)
+
+ Maintain the `{ruminate}` R package, A pharmacometrics data transformation and analysis tool (2022-present).
+
+* Web:          [https://ruminate.ubiquity.tools](https://ruminate.ubiquity.tools)
+* GitHub:       [https://github.com/john-harrold/ruminate](https://github.com/john-harrold/ruminate)
+
+ Maintain the `{formods}` R package, Set of Shiny modules for general tasks (2022-present). 
+
+* Web:          [https://formods.ubiquity.tools](https://formods.ubiquity.tools)
+* GitHub:       [https://github.com/john-harrold/formods](https://github.com/john-harrold/formods)
+
+
+Member of the `{nlmixr2}` development team.
+
+* Web:          [https://nlmixr2.org                       ](https://nlmixr2.org)
+* CRAN:         [https://CRAN.R-project.org/package=nlmixr2](https://CRAN.R-project.org/package=nlmixr2)
+* GitHub:       [https://github.com/nlmixr2/nlmixr2        ](https://github.com/nlmixr2/nlmixr2)
+
+
+<!-- 
+-->
+
+
+# Publications
+
+* @liu_translational_2024
+* @kondic_navigating_2022
+* @selvaggio_computational_2022
+* @pham_preclinical_2021
+* @lu_gipr_2021
+* @harrold_ars_human_2020
+* @harrold_ars_nhp_2020
+* @Melhem:2018ik
+* @krzyzanski2016cell
+* @Tiwari2016
+* @Krzyzanski2015
+* @Chudasama2015
+* @harrold2014ubiquity
+* @dwivedi2014
+* @Harrold:2013CPT
+* @Harrold:2012kp
+* @Vugmeyster:2012bra
+* @Chudasama:2012fb
+* @Vugmeyster:2012br
+* @Kagan:2010p34187
+* @Zhou:2009p27511
+* @Harrold:2009p26247
+* @har06
+* @har05
+* @par04
+
+
+# Posters & Presentations
+
+* @patilea-vrana_abstract_2023
+* @andrews_abstract_2022
+* @li_718_2020  
+* @bailis_abstract_2020
+* @AAPSHarrold2019
+* @ACOPma2016
+* @NBCtawari2016
+* @ASCPTma2016
+* @ACOPHarrold2015
+* @ACOPAbuqayyas2015
+* @ACOPWu2015
+* @ACOP2013
+* @ACOP2011
+* @mager2010mechanistic
+* @ACOP2009
+* @har04b
+* @har04
+* @har03b
+* @har03
+* @har02

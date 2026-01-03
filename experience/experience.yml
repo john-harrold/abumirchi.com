@@ -1,0 +1,5 @@
+- employer: Employer
+  role: Role          
+  description: A one day workshop at `posit::conf(2025)` on customizing Quarto outputs with new formats, templates, and filters.
+  start_date: 2025-01-01
+  stop_date:  2025-10-01
