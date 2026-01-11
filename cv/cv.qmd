@@ -126,7 +126,7 @@ Maintain the `{ubiqiuty}` R package, a complete modeling and simulation workflow
 
  Maintain the `{nlmixr2rpt}` R package, Generate reporting workflows around `{nlmixr2}` analyses with outputs in Word and PowerPoint (2020-present).
 
- * Web:          [https://nlmixr2rpt.ubiquity.tools](https://nlmixr2rpt.ubiquity.tools)
+ * Web:          [https://nlmixr2.github.io/nlmixr2rpt/](https://nlmixr2.github.io/nlmixr2rpt/)
  * CRAN:         [https://CRAN.R-project.org/package=nlmixr2rpt](https://CRAN.R-project.org/package=nlmixr2rpt)
  * GitHub:       [https://github.com/john-harrold/nlmixr2rpt](https://github.com/john-harrold/nlmixr2rpt)
 
