@@ -1,0 +1,187 @@
+/*-- scss:defaults --*/
+
+// 1970s Color Palette
+$burnt-orange: #D4764D;
+$harvest-gold: #E8AA42;
+$avocado-green: #7A8F6F;
+$chocolate-brown: #5D4E37;
+$rust: #B85740;
+$cream: #F5ECD7;
+$warm-beige: #E8DCC8;
+$teal: #5A8C8C;
+
+// Bootstrap variable overrides for 1970s aesthetic
+$body-bg: $cream;
+$body-color: $chocolate-brown;
+$link-color: $rust;
+$link-hover-color: $burnt-orange;
+
+// Primary colors
+$primary: $burnt-orange;
+$secondary: $avocado-green;
+$success: $avocado-green;
+$info: $teal;
+$warning: $harvest-gold;
+$danger: $rust;
+
+// Navbar
+$navbar-bg: $harvest-gold;
+$navbar-fg: $chocolate-brown;
+
+// Headings
+$headings-color: $rust;
+
+// Code blocks
+$code-bg: $warm-beige;
+$code-color: $chocolate-brown;
+
+/*-- scss:rules --*/
+
+// Retro typography feel
+body {
+  font-family: 'Optima', 'Candara', 'Noto Sans', 'source-sans-pro', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+// Navbar styling with retro wavy ombre pattern
+.navbar {
+  background:
+    linear-gradient(
+      110deg,
+      #E8AA42 0%,
+      #E8AA42 15%,
+      #F0A830 15%,
+      #F0A830 20%,
+      #D4764D 20%,
+      #D4764D 28%,
+      #E88C5D 28%,
+      #E88C5D 35%,
+      #B85740 35%,
+      #B85740 45%,
+      #D86B55 45%,
+      #D86B55 52%,
+      #E8AA42 52%,
+      #E8AA42 60%,
+      #F0A830 60%,
+      #F0A830 68%,
+      #E88C5D 68%,
+      #E88C5D 75%,
+      #D4764D 75%,
+      #D4764D 82%,
+      #B85740 82%,
+      #B85740 90%,
+      #E8AA42 90%,
+      #E8AA42 100%
+    ) !important;
+  background-size: 200% 100%;
+  border-bottom: 3px solid $rust;
+  position: relative;
+  overflow: hidden;
+
+  // Create wavy effect with pseudo-element
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(
+        ellipse 150% 80% at 10% 50%,
+        rgba(#F5A86E, 0.7) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse 130% 70% at 40% 40%,
+        rgba(#E8AA42, 0.6) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse 140% 75% at 70% 60%,
+        rgba(#D4764D, 0.65) 0%,
+        transparent 48%
+      ),
+      radial-gradient(
+        ellipse 120% 65% at 90% 45%,
+        rgba(#B85740, 0.5) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        ellipse 160% 85% at 25% 55%,
+        rgba(#F0A830, 0.55) 0%,
+        transparent 50%
+      );
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .navbar-brand, .nav-link {
+    color: $chocolate-brown !important;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      color: darken($chocolate-brown, 10%) !important;
+    }
+  }
+}
+
+// Links with that 70s pop
+a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+// Add some warm borders and accents
+.card, .well {
+  border: 2px solid $avocado-green;
+  background-color: $warm-beige;
+}
+
+// Buttons with retro flair
+.btn-primary {
+  background-color: $burnt-orange;
+  border-color: $rust;
+  color: $cream;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $rust;
+    border-color: $chocolate-brown;
+  }
+}
+
+// Code blocks
+pre, code {
+  background-color: $warm-beige;
+  border: 1px solid $avocado-green;
+  border-radius: 4px;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $harvest-gold;
+  background-color: $warm-beige;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+}
+
+// Add some groovy accent to the page footer
+.nav-footer {
+  background-color: $avocado-green;
+  border-top: 3px solid $rust;
+  color: $cream;
+}

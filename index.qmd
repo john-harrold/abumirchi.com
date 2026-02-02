@@ -20,7 +20,7 @@ Currently a Senior Director of Pharmacometrics at Pfizer where my focus is on th
 
 I received my Ph.D in chemical engineering at the University of Pittsburgh where I developed PKPD models to use in dose regimen design. After graduation I spent two years as a Peace Corps Volunteer teaching biology, chemistry and physics at the National University of Samoa. 
 
-Upon returning to the United States I became a postdoctoral fellow at the Center for Protein Therapeutics in the Pharmaceutical Sciences Department at SUNY Buffalo. As a postdoc I focused on the development of systems pharmacology models of combination therapy for oncology.
+Upon returning to the United States I became a postdoctoral fellow at the Center for Protein Therapeutics in the Pharmaceutical Sciences Department at SUNY Buffalo. As a postdoc I focused on the development of systems pharmacology models of combination therapy in oncology.
 
 I have since worked in industry for over a fifteen years. First at Pfizer, then Amgen, off to Seagen, and back at Pfizer again. I have gained experience using modeling and simulation to support projects ranging from early discovery, IND submission, sBLA filings, and product life-cycle support. 
 :::
