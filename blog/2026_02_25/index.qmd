@@ -2,7 +2,7 @@
 title: "Crossing the Streams"
 description: "How do you solve the issue that each streaming service has it's own system to track what you like, what you want to see, and what you've seen?"
 date: "2026.02.25"
-draft: false 
+draft: true  
 image: "cover.jpg"
 categories:
   - Science
