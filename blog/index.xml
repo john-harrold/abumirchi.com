@@ -43,32 +43,5 @@
   <guid>https://john.abumirchi.com/blog/2026_02_28/</guid>
   <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
-<item>
-  <title>Crossing the Streams</title>
-  <link>https://john.abumirchi.com/blog/2026_02_25/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>In my next example of using Claude Code to take back control of how I use services I’ll start with a problem. I sit down with my wife and kid and I want to watch a movie. Which movie? I go to Netflix it has suggestions and a list that I’ve been curating for a while. So I go to my watch list and start looking. But there is no way to sort this. So I scroll trying to remember what these movies are about. Then I go to Prime Video. Same thing. There is no way for me to get these services to talk to each other and they have control over everything. Even how what I want to see is sorted and displayed.</p>
-<p>So what do I do?</p>
-<p>Well GDPR is a great thing in many ways. Because of GDPR I can export all this information from these services. So I did this with Netflix and Prime Video. But what do I do with that? I go to claude code and I tell it I want to import it all into a service that will allow me to combine my watch lists, what I have watched in the past, and what I’ve liked or disliked in the past.</p>
-<p>Now this isn’t automatic. I have to go back and forth on things. Likes for example. They are different on Netflix (thumbs down, +1 thumb up, 2 thumbs up or neutral) vs Prime video (up, down or netural). And the names of titles are not standardized, so I have to work with claude on how they are matched. You can see the import dialog below. It took a few shots with each service to get it right for me.</p>
-<p>Next I tell claude: Hey I want you to dump everything into a default playlist. And then give me the ability to create new playlists. When I view playlists I want to be able to filter them by type or ratings. I want to be able to sort them by genera. This helps me to find something appropriate in the moment.</p>
-<p>I can control what is shown in popups. Here I have it show me the year, how many stars, the primary language and the genres. I have it show above or below the title so if I want I can add/remove the playlists it’s in. I can also rate it myself.</p>
-<p>When I click on a title I can control how the details look. Here I have a lot of the same information but I also have links out to streaming services. So if I want to watch it I can go to where ever it’s available. I had claude also provide a more like this option to find similar movies. And I had it embed Youtube trailers for the movies as well. Everything I’m showing you here is on my own network at home.</p>
-<p>Now I didn’t just import my playlists. I also imported what I’ve viewed before, and my likes. With this information I can create my own For You Page with titles based on my previous viewing habits. I can also customize this. Each user can adjust how this works by specifying reccomendation preferences in their settings. Here you can see I added Britis Crime Drama and Bollywood movies. You can also add keywords and specify languages you prefer movies to be in.</p>
-<p>I also wanted a separate set of reccomendations for what is popular and what is going on on streaming services. All the data here is being pulled from public databases and this took about 5 days to put together with Claude Code.</p>
-
-
-
- ]]></description>
-  <category>Science</category>
-  <category>Technology</category>
-  <guid>https://john.abumirchi.com/blog/2026_02_25/</guid>
-  <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://john.abumirchi.com/blog/2026_02_25/cover.jpg" medium="image" type="image/jpeg"/>
-</item>
 </channel>
 </rss>
