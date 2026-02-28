@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ca1d4d538bba960afd131b03858d10fb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c74ce918b43f174eeed59137c978688b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,6 +97,10 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Writing</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="../extracurriculars/index.html" aria-current="page"> 
 <span class="menu-text">Extracurriculars</span></a>
   </li>  
@@ -138,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>For fun I develop tools, mostly in R for analyizing PK/PD data. Currently I maintain the following R packages:</p>
+<p>For fun I develop tools, mostly in R for analyzing PK/PD data. Currently I maintain the following R packages:</p>
 <div class="flex">
 <figure class="figure">
 <a href="https://r.ubiquity.tools" target="_blank"> <img src="images/ubiquity_hex.png" width="150" class="figure-img"> </a>
@@ -146,10 +150,10 @@ ul.task-list li input[type="checkbox"] {
 r.ubiquity.tools
 </figcaption>
 </figure>
-<p>When I started working in industry I noticed that there were several different kinds of modeling tools being used. I was using Matlab at the time and it was difficult to work with anyone using other tools like Adapt or R. So I created ubiquity as a set of scritps that would read in a file that defined a system of ODEs and then automatically translate that into inputs for several different modeling tools: Matlab (m-file and C), Fortran, R (script and C), mrgsolve, etc. The ubiquity R package is an implementation of these scripts that provides a workflow for simulation, naive-pooled parameter estimation, reporting, etc. It will create templates for those analyses as well as a customizable stand-alone Shiny app for your model.</p>
+<p>When I started working in industry I noticed that there were several different kinds of modeling tools being used. I was using Matlab at the time and it was difficult to work with anyone using other tools like Adapt or R. So I created ubiquity as a set of scripts that would read in a file that defined a system of ODEs and then automatically translate that into inputs for several different modeling tools: Matlab (m-file and C), Fortran, R (script and C), mrgsolve, etc. The ubiquity R package is an implementation of these scripts that provides a workflow for simulation, naive-pooled parameter estimation, reporting, etc. It will create templates for those analyses as well as a customizable stand-alone Shiny app for your model.</p>
 </div>
 <div class="flex">
-<p>This ruminate package is an attempt to wrap commonly used pharmacometrics tools in shiny modules. The goal is to make these tools available to people who have limited programming experience. It generates code that users can use as a starting point for an analysis or to learn how to use a specic tool. Currently it has support for data wranling (dplyr, tidyr), figure generation (ggplot), non-compartmental analysis (PKNCA), and population simulations (rxode2). You can save and load your analysis, create workflows, generate reports (Word, PowerPoing and Excel) as well as generate a script to allow you go create validatable analyses independent of the app.</p>
+<p>This ruminate package is an attempt to wrap commonly used pharmacometrics tools in shiny modules. The goal is to make these tools available to people who have limited programming experience. It generates code that users can use as a starting point for an analysis or to learn how to use a specific tool. Currently it has support for data wranling (dplyr, tidyr), figure generation (ggplot), non-compartmental analysis (PKNCA), and population simulations (rxode2). You can save and load your analysis, create workflows, generate reports (Word, PowerPoint and Excel) as well as generate a script to allow you go create validatable analyses independent of the app.</p>
 <figure class="figure">
 <a href="https://ruminate.ubiquity.tools" target="_blank"> <img src="images/ruminate_hex.png" width="150" class="figure-img"> </a>
 <figcaption>
@@ -182,7 +186,7 @@ onbrand.ubiquity.tools
 nlmixr2.github.io/nlmixr2rpt
 </figcaption>
 </figure>
-<p>I’m extremely lucky to work on the nlmixr2 team. One of the things I want to do there is to make it easier to use nlmixr2 in workflows within organizations. One thing we often have to do is document our analyses. The nlmixr2rpt package provides functions to generate reports (Word &amp; PowerPoint) from templates. Say when you develop TGI models you use the same figures and tables each time just the name of the compound changes. You can create a template for your TGI models and tweak it when necessary. It sits on top of the onbrand package to allow you to easily swich over your document templates when they changge.</p>
+<p>I’m extremely lucky to work on the nlmixr2 team. One of the things I want to do there is to make it easier to use nlmixr2 in workflows within organizations. One thing we often have to do is document our analyses. The nlmixr2rpt package provides functions to generate reports (Word &amp; PowerPoint) from templates. Say when you develop TGI models you use the same figures and tables each time just the name of the compound changes. You can create a template for your TGI models and tweak it when necessary. It sits on top of the onbrand package to allow you to easily switch over your document templates when they change.</p>
 </div>
 
 
