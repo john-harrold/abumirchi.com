@@ -5,7 +5,7 @@ format:
     css: /resources/styles.css
 ---
 
-For fun I develop tools, mostly in R for analyizing PK/PD data. Currently I maintain the following R packages:
+For fun I develop tools, mostly in R for analyzing PK/PD data. Currently I maintain the following R packages:
 
 ::: {.flex}
 <figure>
@@ -15,12 +15,12 @@ For fun I develop tools, mostly in R for analyizing PK/PD data. Currently I main
   <figcaption>r.ubiquity.tools</figcaption>
 </figure>
 
-When I started working in industry I noticed that there were several different kinds of modeling tools being used. I was using Matlab at the time and it was difficult to work with anyone using other tools like Adapt or R. So I created ubiquity as a set of scritps that would read in a file that defined a system of ODEs and then automatically translate that into inputs for several different modeling tools: Matlab (m-file and C), Fortran, R (script and C), mrgsolve, etc. The ubiquity R package is an implementation of these scripts that provides a workflow for simulation, naive-pooled parameter estimation, reporting, etc. It will create templates for those analyses as well as a customizable stand-alone Shiny app for your model. 
+When I started working in industry I noticed that there were several different kinds of modeling tools being used. I was using Matlab at the time and it was difficult to work with anyone using other tools like Adapt or R. So I created ubiquity as a set of scripts that would read in a file that defined a system of ODEs and then automatically translate that into inputs for several different modeling tools: Matlab (m-file and C), Fortran, R (script and C), mrgsolve, etc. The ubiquity R package is an implementation of these scripts that provides a workflow for simulation, naive-pooled parameter estimation, reporting, etc. It will create templates for those analyses as well as a customizable stand-alone Shiny app for your model. 
 :::
 
 ::: {.flex}
 
-This ruminate package is an attempt to wrap commonly used pharmacometrics tools in shiny modules. The goal is to make these tools available to people who have limited programming experience. It generates code that users can use as a starting point for an analysis or to learn how to use a specic tool. Currently it has support for data wranling (dplyr, tidyr), figure generation (ggplot), non-compartmental analysis (PKNCA), and population simulations (rxode2). You can save and load your analysis, create workflows, generate reports (Word, PowerPoing and Excel) as well as generate a script to allow you go create validatable analyses independent of the app.
+This ruminate package is an attempt to wrap commonly used pharmacometrics tools in shiny modules. The goal is to make these tools available to people who have limited programming experience. It generates code that users can use as a starting point for an analysis or to learn how to use a specific tool. Currently it has support for data wranling (dplyr, tidyr), figure generation (ggplot), non-compartmental analysis (PKNCA), and population simulations (rxode2). You can save and load your analysis, create workflows, generate reports (Word, PowerPoint and Excel) as well as generate a script to allow you go create validatable analyses independent of the app.
 
 <figure>
   <a href="https://ruminate.ubiquity.tools" target="_blank">
@@ -60,5 +60,5 @@ The officer package provides extensive methods for accessing, creating, and modi
   <figcaption>nlmixr2.github.io/nlmixr2rpt</figcaption>
 </figure>
 
-I'm extremely lucky to work on the nlmixr2 team. One of the things I want to do there is to make it easier to use nlmixr2 in workflows within organizations. One thing we often have to do is document our analyses. The nlmixr2rpt package provides functions to generate reports (Word & PowerPoint) from templates. Say when you develop TGI models you use the same figures and tables each time just the name of the compound changes. You can create a template for your TGI models and tweak it when necessary. It sits on top of the onbrand package to allow you to easily swich over your document templates when they changge. 
+I'm extremely lucky to work on the nlmixr2 team. One of the things I want to do there is to make it easier to use nlmixr2 in workflows within organizations. One thing we often have to do is document our analyses. The nlmixr2rpt package provides functions to generate reports (Word & PowerPoint) from templates. Say when you develop TGI models you use the same figures and tables each time just the name of the compound changes. You can create a template for your TGI models and tweak it when necessary. It sits on top of the onbrand package to allow you to easily switch over your document templates when they change. 
 :::

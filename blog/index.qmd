@@ -1,0 +1,9 @@
+---
+title: "Writing"
+listing:
+  contents: "*/index.{qmd,ipynb}"
+  type: default
+  sort: "date desc"
+  categories: FALSE
+  feed: true
+---

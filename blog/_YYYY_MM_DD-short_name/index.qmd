@@ -1,0 +1,12 @@
+---
+title: "TITLE"
+description: "DESC"
+date: "YYYY.MM.DD"
+draft: false 
+#image: "cover.jpg"
+categories:
+  - Science
+  - Technology
+---
+
+Text
