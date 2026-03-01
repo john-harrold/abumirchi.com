@@ -8,15 +8,15 @@ website:
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   #page-footer: "Made with ❤️ and Quarto"
   search: true
-  drafts: gone
+  draft-mode: gone
   navbar:
     right:
     # - text: Home
     #   href: index.qmd
-      - text: Writing
-        href: blog/index.qmd
       - text: Extracurriculars
         href: extracurriculars/index.qmd
+      - text: Writing
+        href: blog/index.qmd
       - text: CV
         href: cv/index.qmd
     # - text: Experience
