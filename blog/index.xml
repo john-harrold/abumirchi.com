@@ -12,7 +12,7 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Crossing the Streams</title>
+  <title>Crossing the streams</title>
   <link>https://john.abumirchi.com/blog/2026_02_28-streaming/</link>
   <description><![CDATA[ 
 
@@ -75,7 +75,7 @@ Figure&nbsp;1: Examples of watchlists exported from Netflix (top) and Primve Vid
   <media:content url="https://john.abumirchi.com/blog/2026_02_28-streaming/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Take the power back</title>
+  <title>Take back of the Internet</title>
   <dc:creator>John </dc:creator>
   <link>https://john.abumirchi.com/blog/2026_02_28-overview/</link>
   <description><![CDATA[ 
@@ -98,6 +98,15 @@ Figure&nbsp;1: Examples of watchlists exported from Netflix (top) and Primve Vid
 <li>Creating a custom DVR to manage my security cameras.</li>
 <li>Creating a service to manage all of this: Monitoring the health of these services and assigning service tickets (for bug fixes and new features). These tickets are resolved automatically by Claude Code.</li>
 </ul>
+<p>If you’re interested in doing this yourself, this is how you can get started if you’re using a Mac. First install these tools:</p>
+<ul>
+<li>Xcode</li>
+<li>Docker Desktop</li>
+<li>An IDE like vscode or positron</li>
+<li>Brew <a href="http://brew.sh">brew.sh</a> - This is aone liner you copy/paste into the terminal</li>
+<li>Claude Code of course - The pro subscruption costs $20/month or $200/year</li>
+</ul>
+<p>You don’t have to have an IDE. It’s convenient if you want so see how the code changes as Claude works. Both vscode and positron have a terminal built in. If you don’t use an IDE you can use the macos terminal.</p>
 
 
 
