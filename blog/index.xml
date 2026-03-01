@@ -10,20 +10,84 @@
 <atom:link href="https://john.abumirchi.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 28 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Take the power back</title>
-  <dc:creator>John </dc:creator>
-  <link>https://john.abumirchi.com/blog/2026_02_28/</link>
+  <title>Crossing the Streams</title>
+  <link>https://john.abumirchi.com/blog/2026_02_28-streaming/</link>
   <description><![CDATA[ 
 
 
 
 
-<p>Bluesky is where I prefer to do my social mediaing. Like most sites it has a particular perspective on things and the overwhelming attitude towards AI is something along the lines of: Industrial plaerism machine. Most of this is due to how AI is encountered. It’s filling all of our social media feeds, google search results are garbage now, creepy folks are using with their personal surveilance glassed to be creeps in public. All these things are true. The refrain you hear from many folks is: AI is only good at programming, I’m not a programmer, and I want nothing to do with it.</p>
-<p>You may not be a programmer, but you most certainly use software. Software is largely created by large corporations and most of us are consumers. We wait for companies to release it and then we use it. If it doesnt work or just works poorly, we may complaine about it. Though most companies are too large and the software they produce is targeting a broad audience. Consequently this means our suggestions and greiviences are not likely to gain any traction. So what is a non-programmer to do?</p>
-<p>You may not be a programmer but with Claude Code you can certainly create software. Not only can you create softwar, you can create software that does what you want. You can control almost every aspect of what you do. And in the process you can take back control over how you use computers and limit how much of your data these giant corporations can harvest.</p>
-<p>I’ve been exploring these ideas with a series of projects and I want to take this space to expand on that a bit. Here is a list of what I’ve done and I will expand on these in detail in the future:</p>
+<p>In my next example of using Claude Code to take back control of how I use services I’ll start with a problem. I sit down with my wife and kid and I want to watch a movie. Which movie? I go to Netflix it has suggestions and a list that I’ve been curating for a while. So I go to my watch list and start looking. But there is no way to sort this. So I scroll trying to remember what these movies are about. Then I go to Prime Video. Same thing. There is no way for me to get these services to talk to each other and they have control over everything. Even how what I want to see is sorted and displayed.</p>
+<p>So what do I do? According to Claude, GDPR requires these services to allow me to download my personal data. So I do that for Netflix and Prime video. I tell Claude that I want to create a service that will combine my watchlists, merge in my watch history, and also my likes. I want the watchlists together so I can make some sense of them. I also want the other data because I want to combine all of it to generate recommendations. I give Claude the following prompt:</p>
+<blockquote class="blockquote">
+<p>I want to create a web-based service called “The List” for discovering and oragnizing movies and television shows. I want to be able to organize them into playlists. I want to use my watch history and watch lists from amazon prime video, disney plus, and netflix as initial sources. I would like to be able to select a movie or TV show from the The List and have it link out to the streaming service where it is available.</p>
+</blockquote>
+<p>It did the normal thing where it asked me questions, did some research, and built a plan. After refining the plan and approving it spent about 10 minutes or so and then sent me to a url.</p>
+<p>The first draft was OK. It had a basic framework and hooks for things (like the import page). I wanted it to look more like a streaming services look. You know the look. A good default page with title listed in tiles, mouse overs, stuff like that. So I asked to to give me a suggests page where it just suggested popular stuff. Then I started refining the look of how it displayed titles: A aposter with the name of the title over it. A mouseover with details. Now here is where i can make it the way I wanted. Most of them kind of pop out the title and put the details where it covers the current row. I told it to put the mouse overdetails above or below it so I could see the current title and the rest of the row. I did this because I wanted to embed form objects in the title. Mainly my own personal rating and the ability to add/remove this title from watch lists. In the mouseover details I also told it exactly what I wanted. For example I had it add the primary language of the film. This is what it currently looks like:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://john.abumirchi.com/blog/2026_02_28-streaming/panel_view.jpg" class="img-fluid figure-img"></p>
+<figcaption>Still of pane view. It shows the mouse over for the show Somebody Somewhere and the pulldown showing its currently in the Watch Later list and none of the others.</figcaption>
+</figure>
+</div>
+<p>Next I started importing things. Here’s something to think about: Both Netflix and Amazon provide data but they dont’ provide data in the same way. Netflix for example provides information for all users in the account. So I have my likes and my sons. But it has a field for the user so I can just import my own. As best I can tell Amazon has everything but it’s not separated by user. So if I watch something and my son watches something else both are in the “Watched” table, but I don’t have a way to distinguish things. Another thing to consider is title (movie and TV shows). They don’t give this information to you in a standardized format. Like there are databases of titles with unique keys… No you don’t get those. You get a title that I presume they use internally. Here are examples of watchlists from Netflix and Amazon Prime.</p>
+<div id="fig-myfigure" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-myfigure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="https://john.abumirchi.com/blog/2026_02_28-streaming/watch_list_netflix.jpg" class="img-fluid figure-img"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="https://john.abumirchi.com/blog/2026_02_28-streaming/watch_list_amazon.jpg" class="img-fluid figure-img"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-myfigure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Examples of watchlists exported from Netflix (top) and Primve Video (bottom).
+</figcaption>
+</figure>
+</div>
+<p>I’m pointing this out because when we merege the information in this dataset we need to combine it in a way that we can use public databases for movie and TV titles. This means we have figure out what these things are. Now I say “we” but really it’s Claude. Because claude comes up with a matching algorithm. But when it breaks we have to go back and forth with Claude to point out what is broken. This happened a lot when I was importing the Amazon data. The titles on the previously viewed lists were.. unique. For TV series it would have the format of:</p>
+<blockquote class="blockquote">
+<p>Episode name-TV Series, Season N</p>
+</blockquote>
+<p>So for the episode “End” from season 7 of the good wife it would look like this: “End-The Good Wife, Season 7” And of course there were variations of that. I would import the Amazon data, look at what was being generated, think: Ok this looks kind of off. I’d say: How did you get this Movie that I know should not be there. And it turns out it was matching the episode names (“End” in this example) to titles. Once we figured this out, it went pretty smoothly.</p>
+<p>As an aside: In my day job I deal with clincal data so this wasn’t really that bad.</p>
+<p>Now I have all of my watchlists, previously viewed titles, and my ratings all together. Now I can make some sense of my watchlists. I had both of the watchlists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Moview view. Depending on who is watching I can pull filter based on content rating. I can also group the titles basedon genre:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229477?h=8927da376d" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Now when I find something I’m interested in I can view the details. I can construct this however I want. In this case I’ve retained the rating and list managment widgets. I also have a list of streaming sites with links to search for this title at those sites. So I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229437?h=a07a07626b" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>So that’s the lists and browsing. What about finding new things to watch? I can do that to some degree from the “More Like This” section in the title details. But I can also utilize the watchlists with the rest of the data to create a For You (well me really) feed.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229448?h=6e63727784" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+ ]]></description>
+  <category>Science</category>
+  <category>Technology</category>
+  <guid>https://john.abumirchi.com/blog/2026_02_28-streaming/</guid>
+  <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://john.abumirchi.com/blog/2026_02_28-streaming/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Take the power back</title>
+  <dc:creator>John </dc:creator>
+  <link>https://john.abumirchi.com/blog/2026_02_28-overview/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Bluesky is where I prefer to do my social mediaing. Like most sites it has a particular perspective on things and the overwhelming attitude towards AI is something along the lines of: Industrial plagiarism machine. Most of this is due to how AI is encountered. It’s filling all of our social media feeds, google search results are garbage now, creepy folks are using with their personal surveilance glassed to be creeps in public. All these things are true. The refrain you hear from many folks is: AI is only good at programming, I’m not a programmer, and I want nothing to do with it.</p>
+<p>You may not be a programmer, but you most certainly use software. Software is largely created by large corporations and most of us are consumers. We wait for companies to release it and then we use it. If it doesnt work or just works poorly, we may complain about it. However, most companies are too large and the software they produce is targets broad audience, so our suggestions/greiviences are not likely to gain any traction.</p>
+<p>So what is a non-programmer to do?</p>
+<p>You may not be a programmer but with Claude Code you can certainly create software. Not only can you create software, you can create software that does what you want. You can control almost every aspect of what you do. And in the process you can take back control over how you use computers and limit how much of your data these giant corporations can harvest.</p>
+<p>I’ve been exploring these ideas with a series of projects. My intention is to take this space to expand on that a bit. Here is a list of what I’ve done and I will explain the details about these projects in the future:</p>
 <ul>
 <li>Creating this blog and pkgdown site.</li>
 <li>Integrating health data from Apple and other sources to track my health and fitness goals.</li>
@@ -32,7 +96,7 @@
 <li>Combining my data from streaming sites to allow me to actually find TV shows and movies I want to watch.</li>
 <li>Building my own PDF viewer/editor that works the way I think it should, with only the features it should, and essentially removing my need to buy Adobe Acrobat.</li>
 <li>Creating a custom DVR to manage my security cameras.</li>
-<li>Creating a service to manage all of this that allows me to assign service tickets (for bug fixes and new features) that calls Claude Code to resolve those tickets.</li>
+<li>Creating a service to manage all of this: Monitoring the health of these services and assigning service tickets (for bug fixes and new features). These tickets are resolved automatically by Claude Code.</li>
 </ul>
 
 
@@ -40,7 +104,7 @@
  ]]></description>
   <category>Science</category>
   <category>Data</category>
-  <guid>https://john.abumirchi.com/blog/2026_02_28/</guid>
+  <guid>https://john.abumirchi.com/blog/2026_02_28-overview/</guid>
   <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
