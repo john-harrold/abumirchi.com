@@ -1,6 +1,8 @@
 ---
 title: "TITLE"
-description: "DESC"
+description: |-
+  DESC
+author: John
 date: "YYYY.MM.DD"
 draft: false 
 #image: "cover.jpg"

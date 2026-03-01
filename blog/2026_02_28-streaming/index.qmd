@@ -1,6 +1,9 @@
 ---
-title: "Crossing the Streams"
-description: "How do you solve the issue that each streaming service has it's own system to track what you like, what you want to see, and what you've seen?"
+title: "Crossing the streams"
+description: |-
+  How do you solve the issue that each streaming service has it's own system to
+  track what you like, what you want to see, and what you've seen? What if you
+  want control over these things?
 date: "2026.02.29"
 #draft: true  
 image: "cover.jpg"

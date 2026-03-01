@@ -1,5 +1,5 @@
 ---
-title: "Take the power back"
+title: "Take back of the Internet"
 description: "I know AI is being pushed on you from every direction, but it can also be used to defend yourself. You may not be a programmer but you can create software that works for you and doesn't just extract from you."
 author: "John"
 date: "2026.02.28"
@@ -28,3 +28,14 @@ I've been exploring these ideas with a series of projects. My intention is to ta
 - Building my own PDF viewer/editor that works the way I think it should, with only the features it should, and essentially removing my need to buy Adobe Acrobat.
 - Creating a custom DVR to manage my security cameras.
 - Creating a service to manage all of this: Monitoring the health of these services and assigning service tickets (for bug fixes and new features). These tickets are resolved automatically by Claude Code.
+
+If you're interested in doing this yourself, this is how you can get started if you're using a Mac. First install these tools:
+
+- Xcode
+- Docker Desktop
+- An IDE like vscode or positron
+- Brew [brew.sh](http://brew.sh) - This is aone liner you copy/paste into the terminal
+- Claude Code of course - The pro subscruption costs $20/month or $200/year
+
+
+You don't have to have an IDE. It's convenient if you want so see how the code changes as Claude works. Both vscode and positron have a terminal built in. If you don't use an IDE you can use the macos terminal. 
