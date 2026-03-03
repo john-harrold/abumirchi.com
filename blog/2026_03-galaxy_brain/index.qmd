@@ -1,0 +1,67 @@
+---
+title: "TITLE"
+description: |-
+  DESC
+author: John
+date: "2026-03-01"
+draft: true 
+#image: "cover.jpg"
+categories:
+  - Claude Code
+  - Service Manager
+---
+
+I use something called mymind for clipping things I find useful. It's nice, it integrates into my phone, Chrome, Safari. It dumps everything into a database with tagging. It's searchable. But it's all kind of stuck on their servers. You can export it, but it's not very useful to me there. I want it to be more useful. So I created a CLAUDE.md file with the following:
+
+> I want to create a service like mymind for clipping information as I encounter
+> it on the internet. I would like to be able to setup a secure means of
+> encrypting and saving data outside my home, have it securely transferred home
+> and stored there permanently. I want to be able to capture urls and archives
+> of the web pages. I think using an extension in Chrome or Safari. Lets start
+> on my laptop. Have it save the files locally and transfer them when done. 
+> 
+> I would like to have a web interface running on the server where all the files
+> are stored. I should be able to create new cards here with the option of
+> embedding files, if a url is supplied it should try to capture and archive the
+> contents of that url. Start with something similar to mymind and I can customize it from
+> there. Initialize the system with the data in mymind_export. 
+
+
+Then I went to my service management interface, told it to rediscover services. It found the "galaxy_brain" service, and I told it to build the service.
+
+
+{{< video https://vimeo.com/1169352148/5b59cdcd97?share=copy&fl=sv&fe=ci >}}
+
+And about 18 minutes later it was done. If you look at the "Initial Service" Video you can see what it looks like. All those things at the top? Those are tags. Some I created but the vast majority were automatically created by mymind when things were imported the different assets.
+
+
+::: {.panel-tabset}
+
+## Ticket Details
+
+![](galaxy_brain-built.png)
+
+## Initial Service
+
+{{< video https://vimeo.com/1169361225/84acc675d5 >}}
+
+:::
+
+ So I want to clean this up a bit.  I don't want all of the tags to show. I want to be able to type into the search box and have it show the tags that match and allow me to auto-complete a tag. When it's auto completed, I want the tag to appear under the search box with an x to remove it. I also want to be able to type in free text in the search box to further filter things. I also want the service to create previews for known services like Blueksy or Twitter. I want to do this on import and save this information. That way it doesn't have to generate it on the fly.  
+
+
+::: {.panel-tabset}
+
+## Ticket First Revision
+
+{{< video  https://vimeo.com/1169370413/4048cefed9?share=copy&fl=sv&fe=ci >}}
+
+## Result of First Revision
+
+{{< video https://vimeo.com/1169370422/67d8e11587 >}}
+
+:::
+
+For me this looks a lot better. You'll notice the main filters at the top for Article, Webpage, Xpost, etc. I didn't even notice them at first, but I think they will be useful. I'll need to clean them up a bit to suit me. I'll also probably want to make some smaller tweaks. But that can be done by adding more tickets. You can see how straight forward this is. If a ticket doesn't do what I want, I can reopen it at the bottom and prompt it with more details. Sometimes I have to do this because I wasn't specific enough at first. 
+
+I had to drop to a terminal to have a more interactive back and forth with Claude. I can do it on the computer (which is what I typically do if it's going to be a long discussion), or I can do it in the service manager for shorter conversations. In this case I wanted to talk about Chrome extensions since I have no familiarity with it. 

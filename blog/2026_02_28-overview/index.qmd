@@ -20,7 +20,7 @@ You may not be a programmer but with Claude Code you can certainly create softwa
 
 I've been exploring these ideas with a series of projects. My intention is to take this space to expand on that a bit. Here is a list of what I've done and I will explain the details about these projects in the future:
 
-- Creating this blog and pkgdown site. 
+- Creating this blog and Quarto site. 
 - Integrating health data from Apple and other sources to track my health and fitness goals.
 - Creating a local archive of all of my email going back to the 90s and a gmail-like interface that allows me to search and actually find information.
 - Creating my own youtube archiving and recommendation algorithm.
