@@ -126,8 +126,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Crossing the streams</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Science</div>
-    <div class="quarto-category">Technology</div>
+    <div class="quarto-category">Claude Code</div>
+    <div class="quarto-category">Netflix</div>
+    <div class="quarto-category">Prime Video</div>
+    <div class="quarto-category">Streaming</div>
   </div>
   </div>
 
@@ -185,21 +187,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-myfigure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Examples of watchlists exported from Netflix (top) and Primve Video (bottom).
+Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Video (bottom).
 </figcaption>
 </figure>
 </div>
-<p>I’m pointing this out because when we merege the information in this dataset we need to combine it in a way that we can use public databases for movie and TV titles. This means we have figure out what these things are. Now I say “we” but really it’s Claude. Because claude comes up with a matching algorithm. But when it breaks we have to go back and forth with Claude to point out what is broken. This happened a lot when I was importing the Amazon data. The titles on the previously viewed lists were.. unique. For TV series it would have the format of:</p>
+<p>I’m pointing this out because when we merge the information in this dataset we need to combine it in a way that we can use public databases for movie and TV titles. This means we have figure out what these things are. Now I say “we” but really it’s Claude. Because claude comes up with a matching algorithm. But when it breaks we have to go back and forth with Claude to point out what is broken. This happened a lot when I was importing the Amazon data. The titles on the previously viewed lists were.. unique. For TV series it would have the format of:</p>
 <blockquote class="blockquote">
 <p>Episode name-TV Series, Season N</p>
 </blockquote>
 <p>So for the episode “End” from season 7 of the good wife it would look like this: “End-The Good Wife, Season 7” And of course there were variations of that. I would import the Amazon data, look at what was being generated, think: Ok this looks kind of off. I’d say: How did you get this Movie that I know should not be there. And it turns out it was matching the episode names (“End” in this example) to titles. Once we figured this out, it went pretty smoothly.</p>
-<p>As an aside: In my day job I deal with clincal data so this wasn’t really that bad.</p>
-<p>Now I have all of my watchlists, previously viewed titles, and my ratings all together. Now I can make some sense of my watchlists. I had both of the watchlists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Moview view. Depending on who is watching I can pull filter based on content rating. I can also group the titles basedon genre:</p>
+<p>As an aside: In my day job I deal with clinical data so this wasn’t really that bad.</p>
+<p>Now I have all of my watch lists, previously viewed titles, and my ratings all together. Now I can make some sense of my watch lists. I had both of the watch lists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Movie view. Depending on who is watching I can pull filter based on content rating. I can also group the titles based on genre:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229477?h=8927da376d" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Now when I find something I’m interested in I can view the details. I can construct this however I want. In this case I’ve retained the rating and list managment widgets. I also have a list of streaming sites with links to search for this title at those sites. So I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
+<p>Now when I find something I’m interested in I can view the details. I can construct this however I want. In this case I’ve retained the rating and list management widgets. I also have a list of streaming sites with links to search for this title at those sites. So I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229437?h=a07a07626b" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>So that’s the lists and browsing. What about finding new things to watch? I can do that to some degree from the “More Like This” section in the title details. But I can also utilize the watchlists with the rest of the data to create a For You (well me really) feed.</p>
+<p>So that’s the lists and browsing. What about finding new things to watch? I can do that to some degree from the “More Like This” section in the title details. But I can also utilize the watch lists with the rest of the data to create a For You (well me really) feed.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229448?h=6e63727784" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 
 

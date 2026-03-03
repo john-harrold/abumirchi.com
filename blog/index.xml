@@ -10,7 +10,32 @@
 <atom:link href="https://john.abumirchi.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 01 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 02 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Mo Service, Mo Problems</title>
+  <dc:creator>John </dc:creator>
+  <link>https://john.abumirchi.com/blog/2026_03_2-service_manager/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>As I started this, I must confess that I found it pretty exciting. I had more ideas than mental capacity to deal with them. I’d send Claude off on a task and then I’d think: You know, I’ve always wanted to… And then I start another project. Then I’d go back to a previous project and think: OK where was I? Oh yes now I remember. But after a while it became a little unmanageable. So I thought: You know I should really have claude manage this for me.</p>
+<p>So I started another project. This time in a space parallel to my current projects. I opened the CLAUDE.md file in the service manager directory and started typing. Then I refined it until I had this (content warning, service tickets are involved):</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169766119?h=ef9ed10d84" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>What you’re looking at is a dashboard of the different services. It indicates if the service is up and healthy. If I want to work on that service, I can go to it and from there I can create tickets. If you work in corporate America this may be traumatic (but you were warned). The way service tickets work is you can just type in what you want Claude to do. Set Autopilot to true, and click create ticket.</p>
+<p>In this instance I saw how something in my note taking app was working and I wanted to change it. So I typed in what I was looking for and sent it on it’s way. You’ll notice it didn’t quite work the way I wanted, so I reopened the ticket to clarify.</p>
+<p>There are different levels of interaction. For small things like this, I’ll just use a ticket. If I want to have a longer discussion about it, you see the claude interface is embedded directly in that services details page. And if its even more involved, I’ll just open a prompt on the server.</p>
+<p>The service manager will also monitor the services. If they go down, it will create a ticket with autopilot set to fix the broken service.</p>
+
+
+
+ ]]></description>
+  <category>Claude Code</category>
+  <category>Service Manager</category>
+  <guid>https://john.abumirchi.com/blog/2026_03_2-service_manager/</guid>
+  <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Crossing the streams</title>
   <link>https://john.abumirchi.com/blog/2026_02_28-streaming/</link>
@@ -48,28 +73,30 @@
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-myfigure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Examples of watchlists exported from Netflix (top) and Primve Video (bottom).
+Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Video (bottom).
 </figcaption>
 </figure>
 </div>
-<p>I’m pointing this out because when we merege the information in this dataset we need to combine it in a way that we can use public databases for movie and TV titles. This means we have figure out what these things are. Now I say “we” but really it’s Claude. Because claude comes up with a matching algorithm. But when it breaks we have to go back and forth with Claude to point out what is broken. This happened a lot when I was importing the Amazon data. The titles on the previously viewed lists were.. unique. For TV series it would have the format of:</p>
+<p>I’m pointing this out because when we merge the information in this dataset we need to combine it in a way that we can use public databases for movie and TV titles. This means we have figure out what these things are. Now I say “we” but really it’s Claude. Because claude comes up with a matching algorithm. But when it breaks we have to go back and forth with Claude to point out what is broken. This happened a lot when I was importing the Amazon data. The titles on the previously viewed lists were.. unique. For TV series it would have the format of:</p>
 <blockquote class="blockquote">
 <p>Episode name-TV Series, Season N</p>
 </blockquote>
 <p>So for the episode “End” from season 7 of the good wife it would look like this: “End-The Good Wife, Season 7” And of course there were variations of that. I would import the Amazon data, look at what was being generated, think: Ok this looks kind of off. I’d say: How did you get this Movie that I know should not be there. And it turns out it was matching the episode names (“End” in this example) to titles. Once we figured this out, it went pretty smoothly.</p>
-<p>As an aside: In my day job I deal with clincal data so this wasn’t really that bad.</p>
-<p>Now I have all of my watchlists, previously viewed titles, and my ratings all together. Now I can make some sense of my watchlists. I had both of the watchlists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Moview view. Depending on who is watching I can pull filter based on content rating. I can also group the titles basedon genre:</p>
+<p>As an aside: In my day job I deal with clinical data so this wasn’t really that bad.</p>
+<p>Now I have all of my watch lists, previously viewed titles, and my ratings all together. Now I can make some sense of my watch lists. I had both of the watch lists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Movie view. Depending on who is watching I can pull filter based on content rating. I can also group the titles based on genre:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229477?h=8927da376d" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Now when I find something I’m interested in I can view the details. I can construct this however I want. In this case I’ve retained the rating and list managment widgets. I also have a list of streaming sites with links to search for this title at those sites. So I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
+<p>Now when I find something I’m interested in I can view the details. I can construct this however I want. In this case I’ve retained the rating and list management widgets. I also have a list of streaming sites with links to search for this title at those sites. So I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229437?h=a07a07626b" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>So that’s the lists and browsing. What about finding new things to watch? I can do that to some degree from the “More Like This” section in the title details. But I can also utilize the watchlists with the rest of the data to create a For You (well me really) feed.</p>
+<p>So that’s the lists and browsing. What about finding new things to watch? I can do that to some degree from the “More Like This” section in the title details. But I can also utilize the watch lists with the rest of the data to create a For You (well me really) feed.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229448?h=6e63727784" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 
  ]]></description>
-  <category>Science</category>
-  <category>Technology</category>
+  <category>Claude Code</category>
+  <category>Netflix</category>
+  <category>Prime Video</category>
+  <category>Streaming</category>
   <guid>https://john.abumirchi.com/blog/2026_02_28-streaming/</guid>
   <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
   <media:content url="https://john.abumirchi.com/blog/2026_02_28-streaming/cover.jpg" medium="image" type="image/jpeg"/>
@@ -89,7 +116,7 @@ Figure&nbsp;1: Examples of watchlists exported from Netflix (top) and Primve Vid
 <p>You may not be a programmer but with Claude Code you can certainly create software. Not only can you create software, you can create software that does what you want. You can control almost every aspect of what you do. And in the process you can take back control over how you use computers and limit how much of your data these giant corporations can harvest.</p>
 <p>I’ve been exploring these ideas with a series of projects. My intention is to take this space to expand on that a bit. Here is a list of what I’ve done and I will explain the details about these projects in the future:</p>
 <ul>
-<li>Creating this blog and pkgdown site.</li>
+<li>Creating this blog and Quarto site.</li>
 <li>Integrating health data from Apple and other sources to track my health and fitness goals.</li>
 <li>Creating a local archive of all of my email going back to the 90s and a gmail-like interface that allows me to search and actually find information.</li>
 <li>Creating my own youtube archiving and recommendation algorithm.</li>
