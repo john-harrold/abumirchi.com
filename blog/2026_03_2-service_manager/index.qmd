@@ -40,7 +40,11 @@ ticket to clarify.
 There are different levels of interaction. For small things like this, I'll just
 use a ticket. If I want to have a longer discussion about it, you see the claude
 interface is embedded directly in that services details page. And if its even
-more involved, I'll just open a prompt on the server. 
+more involved, I'll just open a prompt on the server.
+
+I can use this to monitor how many tokens I'm using. The dollar amounts are not
+really relevant because I'm using a monthly plan. Those amounts relate to how
+much it would cost if I were just buying tokens. 
 
 The service manager will also monitor the services. If they go down, it will
 create a ticket with autopilot set to fix the broken service. 

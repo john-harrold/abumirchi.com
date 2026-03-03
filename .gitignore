@@ -5,3 +5,7 @@ _site/*
 **/*.quarto_ipynb
 
 /.quarto/
+blog/.DS_Store
+*..DS_Store
+**/index_files/*
+blog/_YYYY_MM_DD-short_name/index.html
