@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2026-03-02">
 <meta name="description" content="At one point I found myself with four different terminals open. I was trying to implement things in four different projects. I’ll be honest, I was getting confused. Oh where are the project managers when you need them?">
 
-<title>Mo Service, Mo Problems – 🌶️</title>
+<title>Mo Services, Mo Problems – 🌶️</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,9 +73,12 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Mo Service, Mo Problems – 🌶️">
+<meta property="og:title" content="Mo Services, Mo Problems – 🌶️">
 <meta property="og:description" content="At one point I found myself with four different terminals open. I was trying to implement things in four different projects. I’ll be honest, I was getting confused. Oh where are the project managers when you need them?">
+<meta property="og:image" content="https://john.abumirchi.com/blog/2026_03_2-service_manager/health_monitor-notifications.png">
 <meta property="og:site_name" content="🌶️">
+<meta property="og:image:height" content="1354">
+<meta property="og:image:width" content="844">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -124,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mo Service, Mo Problems</h1>
+<h1 class="title">Mo Services, Mo Problems</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Claude Code</div>
     <div class="quarto-category">Service Manager</div>
@@ -165,11 +168,22 @@ ul.task-list li input[type="checkbox"] {
 <p>As I started using Claude Code, I must confess that I found it pretty exciting. I had more ideas than mental capacity to deal with them. I’d send Claude off on a task and then I’d think: You know, I’ve always wanted to… And then I start another project. Then I’d go back to a previous project and think: OK where was I? Oh yes now I remember. But after a while it became a little unmanageable. So I thought: You know I should really have Claude manage this for me.</p>
 <p>So I started another project. This time in a space parallel to my current projects. I opened the CLAUDE.md file in the service manager directory and started typing. I had Claude build it, and then I refined it until I had this (content warning, service tickets are involved):</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169766119?h=ef9ed10d84" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>What you’re looking at is a dashboard of the different services. It indicates if the service is up and healthy. If I want to work on that service, I can go to it and from there I can create tickets. If you work in corporate America this may be traumatic (but you were warned). The way service tickets work is you can just type in what you want Claude to do. Set Autopilot to true, and click Create.</p>
+<p>What you’re looking at is a dashboard of the different services. It indicates if the service is up and healthy. If I want to work on that service, I can go to it and from there I can create tickets. If you work in corporate America this may be traumatic (but you were warned). The way service tickets work is you can just type in what you want Claude to do. Set Autopilot to true, and click Create. You can do other work and come back later to see the status of things.</p>
 <p>In this instance I saw how something in my note taking app was working and I wanted to change it. So I typed in what I was looking for and sent it on it’s way. You’ll notice it didn’t quite work the way I wanted, so I reopened the ticket to clarify.</p>
 <p>There are different levels of interaction. For small things like this, I’ll just use a ticket. If I want to have a longer discussion about it, you see the claude interface is embedded directly in that services details page. And if its even more involved, I’ll just open a prompt on the server.</p>
 <p>I can use this to monitor how many tokens I’m using. The dollar amounts are not really relevant because I’m using a monthly plan. Those amounts relate to how much it would cost if I were just buying tokens.</p>
-<p>The service manager will also monitor the services. If they go down, it will create a ticket with autopilot set to fix the broken service. I haven’t had to test it yet, but this is how I told it to work :)</p>
+<p>The service manager will also monitor the services. If they go down, it will create a ticket with autopilot set to fix the broken service. For example I had to increase the memory Docker could use. When Docker restarted it left some of the services in a bad state. You can see the errors that were generated below in the first tab. You can see the ticket that was generated and the container for the shiny_server was restarted and the problem fixed.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Service Notifications</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Automated Ticket Generated</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><img src="health_monitor-notifications.png" class="img-fluid"></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><img src="health_monitor-ticket.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
 
 
 
