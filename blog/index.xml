@@ -14,7 +14,7 @@
 <item>
   <title>Mo Services, Mo Problems</title>
   <dc:creator>John </dc:creator>
-  <link>https://john.abumirchi.com/blog/2026_03_2-service_manager/</link>
+  <link>https://john.abumirchi.com/blog/2026_03_02-service_manager/</link>
   <description><![CDATA[ 
 
 
@@ -32,10 +32,10 @@
 <ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Service Notifications</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Automated Ticket Generated</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p><img src="https://john.abumirchi.com/blog/2026_03_2-service_manager/health_monitor-notifications.png" class="img-fluid"></p>
+<p><img src="https://john.abumirchi.com/blog/2026_03_02-service_manager/health_monitor-notifications.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p><img src="https://john.abumirchi.com/blog/2026_03_2-service_manager/health_monitor-ticket.png" class="img-fluid"></p>
+<p><img src="https://john.abumirchi.com/blog/2026_03_02-service_manager/health_monitor-ticket.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -45,8 +45,9 @@
  ]]></description>
   <category>Claude Code</category>
   <category>Service Manager</category>
-  <guid>https://john.abumirchi.com/blog/2026_03_2-service_manager/</guid>
+  <guid>https://john.abumirchi.com/blog/2026_03_02-service_manager/</guid>
   <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://john.abumirchi.com/resources/transparent.png" medium="image" type="image/png" height="1" width="1"/>
 </item>
 <item>
   <title>Crossing the streams</title>
