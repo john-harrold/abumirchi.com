@@ -1,5 +1,5 @@
 ---
-title: "Mo Service, Mo Problems"
+title: "Mo Services, Mo Problems"
 description: |-
   At one point I found myself with four different terminals open. I was trying to implement things in four different projects. I'll be honest, I was getting confused. Oh where are the project managers when you need them?
 author: John
@@ -29,7 +29,8 @@ What you're looking at is a dashboard of the different services. It indicates if
 the service is up and healthy. If I want to work on that service, I can go to it
 and from there I can create tickets. If you work in corporate America this may
 be traumatic (but you were warned). The way service tickets work is you can just
-type in what you want Claude to do. Set Autopilot to true, and click Create. 
+type in what you want Claude to do. Set Autopilot to true, and click Create. You
+can do other work and come back later to see the status of things. 
 
 In this instance I saw how something in my note taking app was working and I
 wanted to change it. So I typed in what I was looking for and sent it on it's
@@ -46,5 +47,20 @@ really relevant because I'm using a monthly plan. Those amounts relate to how
 much it would cost if I were just buying tokens. 
 
 The service manager will also monitor the services. If they go down, it will
-create a ticket with autopilot set to fix the broken service. I haven't had to 
-test it yet, but this is how I told it to work :)
+create a ticket with autopilot set to fix the broken service. For example I had
+to increase the memory Docker could use. When Docker restarted it left some of
+the services in a bad state. You can see the errors that were generated below in
+the first tab. You can see the ticket that was generated and the container for
+the shiny_server was restarted and the problem fixed. 
+
+::: {.panel-tabset}
+
+## Service Notifications
+
+![](health_monitor-notifications.png)
+
+## Automated Ticket Generated 
+
+![](health_monitor-ticket.png)
+
+:::
