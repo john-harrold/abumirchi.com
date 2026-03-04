@@ -5,7 +5,7 @@ description: |-
 author: John
 date: "2026.03.02"
 draft: false 
-#image: "cover.jpg"
+image: "/resources/transparent.png"
 categories:
   - Claude Code
   - Service Manager

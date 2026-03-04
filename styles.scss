@@ -184,11 +184,11 @@ blockquote {
   display: none;
 }
 
-#listing-listing .quarto-post:has(.thumbnail img) .thumbnail {
+#listing-listing .quarto-post:has(.thumbnail img:not([src*="transparent.png"])) .thumbnail {
   display: block;
 }
 
-#listing-listing .quarto-post:not(:has(.thumbnail img)) .body {
+#listing-listing .quarto-post:not(:has(.thumbnail img:not([src*="transparent.png"]))) .body {
   flex: 0 0 100%;
   max-width: 100%;
 }

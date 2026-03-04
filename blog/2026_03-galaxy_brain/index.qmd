@@ -1,11 +1,12 @@
 ---
-title: "TITLE"
+title: "Turning mymind into a Galaxy Brain"
 description: |-
   DESC
 author: John
 date: "2026-03-01"
 draft: true 
 #image: "cover.jpg"
+image: "/resources/transparent.png"
 categories:
   - Claude Code
   - Service Manager
@@ -27,7 +28,7 @@ I use something called mymind for clipping things I find useful. It's nice, it i
 > there. Initialize the system with the data in mymind_export. 
 
 
-Then I went to my service management interface, told it to rediscover services. It found the "galaxy_brain" service, and I told it to build the service.
+The export I got from mymind was unzipped into the mymind_export sub directory. Then I went to my service management interface, told it to rediscover services. It found the "galaxy_brain" service, and I told it to build the service.
 
 
 {{< video https://vimeo.com/1169352148/5b59cdcd97?share=copy&fl=sv&fe=ci >}}
@@ -64,4 +65,25 @@ And about 18 minutes later it was done. If you look at the "Initial Service" Vid
 
 For me this looks a lot better. You'll notice the main filters at the top for Article, Webpage, Xpost, etc. I didn't even notice them at first, but I think they will be useful. I'll need to clean them up a bit to suit me. I'll also probably want to make some smaller tweaks. But that can be done by adding more tickets. You can see how straight forward this is. If a ticket doesn't do what I want, I can reopen it at the bottom and prompt it with more details. Sometimes I have to do this because I wasn't specific enough at first. 
 
-I had to drop to a terminal to have a more interactive back and forth with Claude. I can do it on the computer (which is what I typically do if it's going to be a long discussion), or I can do it in the service manager for shorter conversations. In this case I wanted to talk about Chrome extensions since I have no familiarity with it. 
+I had to drop to a terminal to have a more interactive back and forth with Claude. I can do it on the computer (which is what I typically do if it's going to be a long discussion), or I can do it in the service manager for shorter conversations. In this case I wanted to talk about Chrome extensions since I have no familiarity with it. I had Claude create the extension such that if I'm connected to the network it will save the card directly to the server. If I'm not connected it will save it locally on my computer and sync it later. I also had it embed a download for the extension in the app with instructions on how to use it: 
+
+![Screenshot of the extension page with a link to download and instructions on use.](galaxy_brain-extension.png)
+
+
+Mymind does some automatic processing when a card is added. I don't really want to replace all of that functionality, but there is some that is useful. So I went to the terminal to asked Claude to explain what it can about the process mymind goes through:
+
+> When cards are imported they can have user notes and user defined tags. The
+> current cards came mostly from my mind. It would attach other metadata upon
+> import. For example it would add tags on its own. It would also apply
+> a grouping (e.g. Article, Image, Document, etc.). Can you research they type of
+> metadata that mymind would attach? 
+
+It provided me with a bunch of information, I had it save it in Markdown below so you can read it:
+
+::: {style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 1em;"}
+{{< include mymind.md >}}
+:::  
+
+From subsquent conversations, the best way to do this is to create an LLM running locally (Ollama). I don't want to embed it in this project because I want to be able to use it for other purposes. So I had Claude write up a plan for me and I'll do this part later. 
+
+My goal here is to show how I use the service manager to handle implementation tasks, but generally use the direct interface to better understand what's being done. 

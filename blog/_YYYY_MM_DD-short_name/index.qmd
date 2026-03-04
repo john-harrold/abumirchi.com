@@ -6,6 +6,7 @@ author: John
 date: "YYYY.MM.DD"
 draft: false 
 #image: "cover.jpg"
+#image: "/resources/transparent.png"
 categories:
   - Science
   - Technology
