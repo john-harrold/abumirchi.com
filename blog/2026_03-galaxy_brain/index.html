@@ -1,2 +1,718 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="John">
+<meta name="dcterms.date" content="2026-03-05">
+<meta name="description" content="Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it running locally.">
+
+<title>Turning mymind into a Galaxy Brain – 🌶️</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e48e9f733a505cac067b37631c6d5c21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Turning mymind into a Galaxy Brain – 🌶️">
+<meta property="og:description" content="Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it running locally.">
+<meta property="og:image" content="https://john.abumirchi.com/resources/transparent.png">
+<meta property="og:site_name" content="🌶️">
+<meta property="og:image:height" content="1">
+<meta property="og:image:width" content="1">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">🌶️</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../extracurriculars/index.html"> 
+<span class="menu-text">Extracurriculars</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Turning mymind into a Galaxy Brain</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Claude Code</div>
+    <div class="quarto-category">Service Manager</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it running locally.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>John </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 5, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>I use something called mymind for clipping things I find useful. It’s nice, it integrates into my phone, Chrome, Safari. It dumps everything into a database with tagging. It’s searchable. But it’s all kind of stuck on their servers. You can export it, but it’s not very useful to me there. I want it to be more useful. I thought it would be helpful if I documented how I could reproduce this service by showing the process of going from the initial prompt to something usable.</p>
+<p>I created a directory in my directory of services. In that directory, I created a CLAUDE.md file with the following:</p>
+<blockquote class="blockquote">
+<p>I want to create a service like mymind for clipping information as I encounter it on the internet. I would like to be able to setup a secure means of encrypting and saving data outside my home, have it securely transferred home and stored there permanently. I want to be able to capture urls and archives of the web pages. I think using an extension in Chrome or Safari. Lets start on my laptop. Have it save the files locally and transfer them when done.</p>
+<p>I would like to have a web interface running on the server where all the files are stored. I should be able to create new cards here with the option of embedding files, if a url is supplied it should try to capture and archive the contents of that url. Start with something similar to mymind and I can customize it from there. Initialize the system with the data in mymind_export.</p>
+</blockquote>
+<p>The export I got from mymind was unzipped into the mymind_export sub directory. Then I went to my service management interface, told it to rediscover services. It found the “galaxy_brain” service, and I told it to build the service.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169352148?h=5b59cdcd97" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><em>I’m using the service manager here, but you could just open Claude in that directory and give it the same prompt to do the same thing.</em></p>
+<p>And about 18 minutes later it was done. If you look at the “Initial Service” Video you can see what it looks like. All those things at the top? Those are tags. Some I created but the vast majority were automatically created by mymind when things were imported the different assets.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Ticket Details</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Initial Service</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><img src="galaxy_brain-built.png" class="img-fluid"></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169361225?h=84acc675d5" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+<p>The first thing I want to do is clean this up a bit. So I went to the service manager and submitted the following ticket:</p>
+<blockquote class="blockquote">
+<p>I don’t want all of the tags to show. I want to be able to type into the search box and have it show the tags that match and allow me to auto-complete a tag. When it’s auto completed, I want the tag to appear under the search box with an x to remove it. I also want to be able to type in free text in the search box to further filter things. I also want the service to create previews for known services like Blueksy or Twitter. I want to do this on import and save this information. That way it doesn’t have to generate it on the fly.</p>
+</blockquote>
+<p>You can see me doing this in the video below. I submitted this ticket and in about 12 minutes it was done. You can see what it looks like in the “Result of First Revision” tab below:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Ticket First Revision</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Result of First Revision</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169370413?h=4048cefed9" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169370422?h=67d8e11587" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+<p>For me this looks a lot better. You’ll notice the main categories at the top for Article, Webpage, Xpost, etc. I didn’t even notice them at first, but I think they will be useful. I’ll need to clean them up a bit to suit me. I’ll also probably want to make some smaller tweaks. But that can be done by adding more tickets. You can see how straight forward this is. If a ticket doesn’t do what I want, I can reopen it at the bottom and prompt it with more details. Sometimes I have to do this because I wasn’t specific enough at first.</p>
+<p>If I want a more interactive/back and forth with Claude, I can go to a terminal. I can do it on the computer (which is what I typically do if it’s going to be a long discussion), or I can do it in the service manager for shorter conversations (it has a terminal embedded in each service). In this case I wanted to talk about Chrome extensions since I have no familiarity with it. I had Claude create the extension such that if I’m connected to the network it will save the card directly to the server. If I’m not connected it will save it locally on my computer and sync it later. I also had it embed a download for the extension in the app with instructions on how to use it:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="galaxy_brain-extension.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot of the extension page with a link to download and instructions on use.</figcaption>
+</figure>
+</div>
+<p>Mymind does some automatic processing when a card is added. I don’t really want to replace all of that functionality, but there is some that is useful. So I went to the terminal to asked Claude to explain what it can about the process mymind goes through:</p>
+<blockquote class="blockquote">
+<p>When cards are imported they can have user notes and user defined tags. The current cards came mostly from my mind. It would attach other metadata upon import. For example it would add tags on its own. It would also apply a grouping (e.g.&nbsp;Article, Image, Document, etc.). Can you research they type of metadata that mymind would attach?</p>
+</blockquote>
+<p>It provided me with a bunch of information, I had it save it in Markdown below so you can read it:</p>
+<section id="mymind-auto-generated-metadata" class="level1" style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 1em;">
+<h1>mymind Auto-Generated Metadata</h1>
+<section id="content-type-classification" class="level2">
+<h2 class="anchored" data-anchor-id="content-type-classification">1. Content Type Classification</h2>
+<p>mymind categorizes every item into a type. The export shows 18 distinct types: - <strong>XPost</strong> (489), <strong>Article</strong> (282), <strong>WebPage</strong> (207), <strong>Post</strong> (127), <strong>Product</strong> (89), <strong>Image</strong> (40), <strong>Document</strong> (18), <strong>Embed</strong> (13), <strong>YouTubeVideo</strong> (12), <strong>Repository</strong> (11), <strong>RedditPost</strong> (7), <strong>BlueskyPost</strong> (5), <strong>Issue</strong> (4), <strong>WikipediaArticle</strong> (2), <strong>Note</strong>, <strong>Content</strong>, <strong>MusicRecording</strong>, <strong>TikTokPost</strong> (1 each)</p>
+</section>
+<section id="ai-visual-recognition-tags-computer-vision" class="level2">
+<h2 class="anchored" data-anchor-id="ai-visual-recognition-tags-computer-vision">2. AI Visual Recognition Tags (computer vision)</h2>
+<p>For images and products, mymind runs <strong>computer vision</strong> to detect: - <strong>Objects</strong>: <code>faucets</code>, <code>ring binder</code>, <code>bathtub</code>, <code>plant</code>, <code>drawer</code> - <strong>Colors</strong>: <code>electric blue</code>, <code>magenta</code>, <code>violet</code>, <code>silver</code>, <code>monochrome</code> - <strong>Materials</strong>: <code>metal</code>, <code>aluminium</code>, <code>titanium</code>, <code>brass</code>, <code>wood</code> - <strong>Design attributes</strong>: <code>product design</code>, <code>graphic design</code>, <code>font</code>, <code>logo</code>, <code>brand</code> - <strong>Visual properties</strong>: <code>flash photography</code>, <code>neon sign</code>, <code>atmospheric phenomenon</code></p>
+<p>These cards often have <strong>10-46 tags</strong> each. In the data, 286 cards have &gt;10 tags (mostly auto-visual).</p>
+</section>
+<section id="ocr-optical-character-recognition" class="level2">
+<h2 class="anchored" data-anchor-id="ocr-optical-character-recognition">3. OCR (Optical Character Recognition)</h2>
+<p>mymind reads text within images — screenshots, memes, diagrams — and indexes that text so you can search for words appearing inside images.</p>
+</section>
+<section id="article-summaries" class="level2">
+<h2 class="anchored" data-anchor-id="article-summaries">4. Article Summaries</h2>
+<p>For web pages and articles, mymind generates a short paragraph summary of the content (this appears in the <code>content</code> field, though the export has very few populated).</p>
+</section>
+<section id="smart-card-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="smart-card-extraction">5. Smart Card Extraction</h2>
+<p>For specific content types, it extracts structured metadata: - <strong>Books</strong>: cover image, author, title - <strong>Products</strong>: product image, brand, price info - <strong>Music</strong>: artist, album info - <strong>Recipes</strong>: specialized formatting</p>
+</section>
+<section id="color-search-index" class="level2">
+<h2 class="anchored" data-anchor-id="color-search-index">6. Color Search Index</h2>
+<p>Beyond tagging colors by name, mymind builds a <strong>visual color index</strong> so you can filter by hue (e.g., “show me all blue images”).</p>
+</section>
+<section id="user-tags-vs-auto-tags" class="level2">
+<h2 class="anchored" data-anchor-id="user-tags-vs-auto-tags">User Tags vs Auto Tags</h2>
+<p>In the data, the distinction is clear: - <strong>User tags</strong> (&lt;=5 per card, 672 cards): semantic/topical — <code>read later</code>, <code>Ukraine</code>, <code>rstats</code>, <code>cancel culture</code>, <code>new music</code> - <strong>Auto tags</strong> (&gt;10 per card, 286 cards): visual descriptors — <code>electric blue,technology,poster,magenta,art,font,display device,signage</code></p>
+<p>mymind shows these separately in its UI (labeled “auto-tags” vs user tags).</p>
+</section>
+<section id="whats-in-the-export" class="level2">
+<h2 class="anchored" data-anchor-id="whats-in-the-export">What’s in the Export</h2>
+<p>The CSV has 8 fields: <code>id, type, title, url, content, note, tags, created</code>. The auto-tags and user-tags are <strong>mixed together</strong> in the <code>tags</code> column with no way to distinguish them in the export. Only 13 cards have user notes, and only 2 have content populated.</p>
+<section id="field-population-1310-cards" class="level3">
+<h3 class="anchored" data-anchor-id="field-population-1310-cards">Field Population (1,310 cards)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Populated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Title</td>
+<td>1,173</td>
+</tr>
+<tr class="even">
+<td>URL</td>
+<td>1,261</td>
+</tr>
+<tr class="odd">
+<td>Tags</td>
+<td>1,135</td>
+</tr>
+<tr class="even">
+<td>Note</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>Content</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ul>
+<li><a href="https://mymind.helpscoutdocs.com/article/51-how-to-use-tagging-in-mymind">How to use tagging in mymind</a></li>
+<li><a href="https://skywork.ai/skypage/en/mymind-Your-AI-Powered-Digital-Brain-%E2%80%93-A-Comprehensive-Guide-for-AI-Enthusiasts/1972840147367030784">mymind - Comprehensive Guide (Skywork)</a></li>
+<li><a href="https://mymind.com/what">mymind - What is it?</a></li>
+<li><a href="https://nesslabs.com/mymind-featured-tool">Building an extension of your mind with mymind (Ness Labs)</a></li>
+</ul>
+</section>
+</section>
+<p><br>
+</p>
+<p>From subsequent conversations, the best way to do this is to create an LLM running locally (Ollama). I don’t want to embed it in this project because I want to be able to use it for other purposes. So I had Claude write up a plan for me and I’ll do this part later.</p>
+<p>My goal here is to show how I can go from an idea to a viable service. So after going to the terminal to create the Chrome extension and better understand LLM integration. I went back to the service manager and started working on different details. You can see that here:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="galaxy_brain-tickets-done.png" class="img-fluid figure-img"></p>
+<figcaption>Tickets I used to get the service to a decent state.</figcaption>
+</figure>
+</div>
+<p>Finally I reached a point where I can just start using Galaxy Brain (GB) and cancel my mymind subscription. In the video below you can see how the interface now works. You can also see how I can capture a webpage using the Chrome extension. When I go back to the GB service you see the webpage archived and embedded in the card.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1170526052?h=bb7f026479" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/john\.abumirchi\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

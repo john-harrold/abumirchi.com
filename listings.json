@@ -6,8 +6,9 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/2026_03_02-service_manager/index.html",
       "/blog/2026_02_28-streaming/index.html",
+      "/blog/2026_03-galaxy_brain/index.html",
+      "/blog/2026_03_02-service_manager/index.html",
       "/blog/2026_02_28-overview/index.html"
     ]
   },

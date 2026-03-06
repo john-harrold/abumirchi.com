@@ -10,47 +10,10 @@
 <atom:link href="https://john.abumirchi.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Mon, 02 Mar 2026 00:00:00 GMT</lastBuildDate>
-<item>
-  <title>Mo Services, Mo Problems</title>
-  <dc:creator>John </dc:creator>
-  <link>https://john.abumirchi.com/blog/2026_03_02-service_manager/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>As I started using Claude Code, I must confess that I found it pretty exciting. I had more ideas than mental capacity to deal with them. I’d send Claude off on a task and then I’d think: You know, I’ve always wanted to… And then I start another project. Then I’d go back to a previous project and think: OK where was I? Oh yes now I remember. But after a while it became a little unmanageable. So I thought: You know I should really have Claude manage this for me.</p>
-<p>So I started another project. This time in a space parallel to my current projects. I opened the CLAUDE.md file in the service manager directory and started typing. I had Claude build it, and then I refined it until I had this (content warning, service tickets are involved):</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169766119?h=ef9ed10d84" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>What you’re looking at is a dashboard of the different services. It indicates if the service is up and healthy. If I want to work on that service, I can go to it and from there I can create tickets. If you work in corporate America this may be traumatic (but you were warned). The way service tickets work is you can just type in what you want Claude to do. Set Autopilot to true, and click Create. You can do other work and come back later to see the status of things.</p>
-<p>In this instance I saw how something in my note taking app was working and I wanted to change it. So I typed in what I was looking for and sent it on it’s way. You’ll notice it didn’t quite work the way I wanted, so I reopened the ticket to clarify.</p>
-<p>There are different levels of interaction. For small things like this, I’ll just use a ticket. If I want to have a longer discussion about it, you see the claude interface is embedded directly in that services details page. And if its even more involved, I’ll just open a prompt on the server.</p>
-<p>I can use this to monitor how many tokens I’m using. The dollar amounts are not really relevant because I’m using a monthly plan. Those amounts relate to how much it would cost if I were just buying tokens.</p>
-<p>The service manager will also monitor the services. If they go down, it will create a ticket with autopilot set to fix the broken service. For example I had to increase the memory Docker could use. When Docker restarted it left some of the services in a bad state. You can see the errors that were generated below in the first tab. You can see the ticket that was generated and the container for the shiny_server was restarted and the problem fixed.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Service Notifications</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Automated Ticket Generated</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<p><img src="https://john.abumirchi.com/blog/2026_03_02-service_manager/health_monitor-notifications.png" class="img-fluid"></p>
-</div>
-<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<p><img src="https://john.abumirchi.com/blog/2026_03_02-service_manager/health_monitor-ticket.png" class="img-fluid"></p>
-</div>
-</div>
-</div>
-
-
-
- ]]></description>
-  <category>Claude Code</category>
-  <category>Service Manager</category>
-  <guid>https://john.abumirchi.com/blog/2026_03_02-service_manager/</guid>
-  <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://john.abumirchi.com/resources/transparent.png" medium="image" type="image/png" height="1" width="1"/>
-</item>
+<lastBuildDate>Sun, 29 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Crossing the streams</title>
+  <dc:creator>John </dc:creator>
   <link>https://john.abumirchi.com/blog/2026_02_28-streaming/</link>
   <description><![CDATA[ 
 
@@ -94,11 +57,11 @@ Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Vid
 <blockquote class="blockquote">
 <p>Episode name-TV Series, Season N</p>
 </blockquote>
-<p>So for the episode “End” from season 7 of the good wife it would look like this: “End-The Good Wife, Season 7” And of course there were variations of that. I would import the Amazon data, look at what was being generated, think: Ok this looks kind of off. I’d say: How did you get this Movie that I know should not be there. And it turns out it was matching the episode names (“End” in this example) to titles. Once we figured this out, it went pretty smoothly.</p>
+<p>So for the episode “End” from season 7 of The Good Wife it would look like this: “End-The Good Wife, Season 7” And of course there were variations of that. I would import the Amazon data, look at what was being generated, think: Ok this looks kind of off. I’d say: How did you get this Movie that I know should not be there. And it turns out it was matching the episode names (“End” in this example) to titles. Once we figured this out, it went pretty smoothly.</p>
 <p>As an aside: In my day job I deal with clinical data so this wasn’t really that bad.</p>
-<p>Now I have all of my watch lists, previously viewed titles, and my ratings all together. Now I can make some sense of my watch lists. I had both of the watch lists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Movie view. Depending on who is watching I can pull filter based on content rating. I can also group the titles based on genre:</p>
+<p>Now I have all of my watch lists, previously viewed titles, and my ratings all together. With this I can make some sense of my watch lists. I had both of the watch lists from Netflix and Amazon dumped into a default list. It’s pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Movie view. Depending on who is watching I can pull filter based on content rating. I can also group the titles based on genre:</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229477?h=8927da376d" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Now when I find something I’m interested in I can view the details. I can construct this however I want. In this case I’ve retained the rating and list management widgets. I also have a list of streaming sites with links to search for this title at those sites. So I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
+<p>If I find something I’m interested in I can view the details. The format of how this looks can be constructed however I want. In this case I’ve retained the rating and list management widgets. I also have a list of streaming sites with links to search for this title at those sites. With those links I can easily jump to streaming the title. If I’m looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229437?h=a07a07626b" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>So that’s the lists and browsing. What about finding new things to watch? I can do that to some degree from the “More Like This” section in the title details. But I can also utilize the watch lists with the rest of the data to create a For You (well me really) feed.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169229448?h=6e63727784" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -111,8 +74,206 @@ Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Vid
   <category>Prime Video</category>
   <category>Streaming</category>
   <guid>https://john.abumirchi.com/blog/2026_02_28-streaming/</guid>
-  <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate>
   <media:content url="https://john.abumirchi.com/blog/2026_02_28-streaming/cover.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Turning mymind into a Galaxy Brain</title>
+  <dc:creator>John </dc:creator>
+  <link>https://john.abumirchi.com/blog/2026_03-galaxy_brain/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I use something called mymind for clipping things I find useful. It’s nice, it integrates into my phone, Chrome, Safari. It dumps everything into a database with tagging. It’s searchable. But it’s all kind of stuck on their servers. You can export it, but it’s not very useful to me there. I want it to be more useful. I thought it would be helpful if I documented how I could reproduce this service by showing the process of going from the initial prompt to something usable.</p>
+<p>I created a directory in my directory of services. In that directory, I created a CLAUDE.md file with the following:</p>
+<blockquote class="blockquote">
+<p>I want to create a service like mymind for clipping information as I encounter it on the internet. I would like to be able to setup a secure means of encrypting and saving data outside my home, have it securely transferred home and stored there permanently. I want to be able to capture urls and archives of the web pages. I think using an extension in Chrome or Safari. Lets start on my laptop. Have it save the files locally and transfer them when done.</p>
+<p>I would like to have a web interface running on the server where all the files are stored. I should be able to create new cards here with the option of embedding files, if a url is supplied it should try to capture and archive the contents of that url. Start with something similar to mymind and I can customize it from there. Initialize the system with the data in mymind_export.</p>
+</blockquote>
+<p>The export I got from mymind was unzipped into the mymind_export sub directory. Then I went to my service management interface, told it to rediscover services. It found the “galaxy_brain” service, and I told it to build the service.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169352148?h=5b59cdcd97" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><em>I’m using the service manager here, but you could just open Claude in that directory and give it the same prompt to do the same thing.</em></p>
+<p>And about 18 minutes later it was done. If you look at the “Initial Service” Video you can see what it looks like. All those things at the top? Those are tags. Some I created but the vast majority were automatically created by mymind when things were imported the different assets.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Ticket Details</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Initial Service</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p><img src="https://john.abumirchi.com/blog/2026_03-galaxy_brain/galaxy_brain-built.png" class="img-fluid"></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169361225?h=84acc675d5" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+<p>The first thing I want to do is clean this up a bit. So I went to the service manager and submitted the following ticket:</p>
+<blockquote class="blockquote">
+<p>I don’t want all of the tags to show. I want to be able to type into the search box and have it show the tags that match and allow me to auto-complete a tag. When it’s auto completed, I want the tag to appear under the search box with an x to remove it. I also want to be able to type in free text in the search box to further filter things. I also want the service to create previews for known services like Blueksy or Twitter. I want to do this on import and save this information. That way it doesn’t have to generate it on the fly.</p>
+</blockquote>
+<p>You can see me doing this in the video below. I submitted this ticket and in about 12 minutes it was done. You can see what it looks like in the “Result of First Revision” tab below:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true" href="">Ticket First Revision</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false" href="">Result of First Revision</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169370413?h=4048cefed9" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" aria-labelledby="tabset-2-2-tab">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169370422?h=67d8e11587" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</div>
+</div>
+<p>For me this looks a lot better. You’ll notice the main categories at the top for Article, Webpage, Xpost, etc. I didn’t even notice them at first, but I think they will be useful. I’ll need to clean them up a bit to suit me. I’ll also probably want to make some smaller tweaks. But that can be done by adding more tickets. You can see how straight forward this is. If a ticket doesn’t do what I want, I can reopen it at the bottom and prompt it with more details. Sometimes I have to do this because I wasn’t specific enough at first.</p>
+<p>If I want a more interactive/back and forth with Claude, I can go to a terminal. I can do it on the computer (which is what I typically do if it’s going to be a long discussion), or I can do it in the service manager for shorter conversations (it has a terminal embedded in each service). In this case I wanted to talk about Chrome extensions since I have no familiarity with it. I had Claude create the extension such that if I’m connected to the network it will save the card directly to the server. If I’m not connected it will save it locally on my computer and sync it later. I also had it embed a download for the extension in the app with instructions on how to use it:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://john.abumirchi.com/blog/2026_03-galaxy_brain/galaxy_brain-extension.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot of the extension page with a link to download and instructions on use.</figcaption>
+</figure>
+</div>
+<p>Mymind does some automatic processing when a card is added. I don’t really want to replace all of that functionality, but there is some that is useful. So I went to the terminal to asked Claude to explain what it can about the process mymind goes through:</p>
+<blockquote class="blockquote">
+<p>When cards are imported they can have user notes and user defined tags. The current cards came mostly from my mind. It would attach other metadata upon import. For example it would add tags on its own. It would also apply a grouping (e.g.&nbsp;Article, Image, Document, etc.). Can you research they type of metadata that mymind would attach?</p>
+</blockquote>
+<p>It provided me with a bunch of information, I had it save it in Markdown below so you can read it:</p>
+<section id="mymind-auto-generated-metadata" class="level1" style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 1em;">
+<h1>mymind Auto-Generated Metadata</h1>
+<section id="content-type-classification" class="level2">
+<h2 class="anchored" data-anchor-id="content-type-classification">1. Content Type Classification</h2>
+<p>mymind categorizes every item into a type. The export shows 18 distinct types: - <strong>XPost</strong> (489), <strong>Article</strong> (282), <strong>WebPage</strong> (207), <strong>Post</strong> (127), <strong>Product</strong> (89), <strong>Image</strong> (40), <strong>Document</strong> (18), <strong>Embed</strong> (13), <strong>YouTubeVideo</strong> (12), <strong>Repository</strong> (11), <strong>RedditPost</strong> (7), <strong>BlueskyPost</strong> (5), <strong>Issue</strong> (4), <strong>WikipediaArticle</strong> (2), <strong>Note</strong>, <strong>Content</strong>, <strong>MusicRecording</strong>, <strong>TikTokPost</strong> (1 each)</p>
+</section>
+<section id="ai-visual-recognition-tags-computer-vision" class="level2">
+<h2 class="anchored" data-anchor-id="ai-visual-recognition-tags-computer-vision">2. AI Visual Recognition Tags (computer vision)</h2>
+<p>For images and products, mymind runs <strong>computer vision</strong> to detect: - <strong>Objects</strong>: <code>faucets</code>, <code>ring binder</code>, <code>bathtub</code>, <code>plant</code>, <code>drawer</code> - <strong>Colors</strong>: <code>electric blue</code>, <code>magenta</code>, <code>violet</code>, <code>silver</code>, <code>monochrome</code> - <strong>Materials</strong>: <code>metal</code>, <code>aluminium</code>, <code>titanium</code>, <code>brass</code>, <code>wood</code> - <strong>Design attributes</strong>: <code>product design</code>, <code>graphic design</code>, <code>font</code>, <code>logo</code>, <code>brand</code> - <strong>Visual properties</strong>: <code>flash photography</code>, <code>neon sign</code>, <code>atmospheric phenomenon</code></p>
+<p>These cards often have <strong>10-46 tags</strong> each. In the data, 286 cards have &gt;10 tags (mostly auto-visual).</p>
+</section>
+<section id="ocr-optical-character-recognition" class="level2">
+<h2 class="anchored" data-anchor-id="ocr-optical-character-recognition">3. OCR (Optical Character Recognition)</h2>
+<p>mymind reads text within images — screenshots, memes, diagrams — and indexes that text so you can search for words appearing inside images.</p>
+</section>
+<section id="article-summaries" class="level2">
+<h2 class="anchored" data-anchor-id="article-summaries">4. Article Summaries</h2>
+<p>For web pages and articles, mymind generates a short paragraph summary of the content (this appears in the <code>content</code> field, though the export has very few populated).</p>
+</section>
+<section id="smart-card-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="smart-card-extraction">5. Smart Card Extraction</h2>
+<p>For specific content types, it extracts structured metadata: - <strong>Books</strong>: cover image, author, title - <strong>Products</strong>: product image, brand, price info - <strong>Music</strong>: artist, album info - <strong>Recipes</strong>: specialized formatting</p>
+</section>
+<section id="color-search-index" class="level2">
+<h2 class="anchored" data-anchor-id="color-search-index">6. Color Search Index</h2>
+<p>Beyond tagging colors by name, mymind builds a <strong>visual color index</strong> so you can filter by hue (e.g., “show me all blue images”).</p>
+</section>
+<section id="user-tags-vs-auto-tags" class="level2">
+<h2 class="anchored" data-anchor-id="user-tags-vs-auto-tags">User Tags vs Auto Tags</h2>
+<p>In the data, the distinction is clear: - <strong>User tags</strong> (&lt;=5 per card, 672 cards): semantic/topical — <code>read later</code>, <code>Ukraine</code>, <code>rstats</code>, <code>cancel culture</code>, <code>new music</code> - <strong>Auto tags</strong> (&gt;10 per card, 286 cards): visual descriptors — <code>electric blue,technology,poster,magenta,art,font,display device,signage</code></p>
+<p>mymind shows these separately in its UI (labeled “auto-tags” vs user tags).</p>
+</section>
+<section id="whats-in-the-export" class="level2">
+<h2 class="anchored" data-anchor-id="whats-in-the-export">What’s in the Export</h2>
+<p>The CSV has 8 fields: <code>id, type, title, url, content, note, tags, created</code>. The auto-tags and user-tags are <strong>mixed together</strong> in the <code>tags</code> column with no way to distinguish them in the export. Only 13 cards have user notes, and only 2 have content populated.</p>
+<section id="field-population-1310-cards" class="level3">
+<h3 class="anchored" data-anchor-id="field-population-1310-cards">Field Population (1,310 cards)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Populated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Title</td>
+<td>1,173</td>
+</tr>
+<tr class="even">
+<td>URL</td>
+<td>1,261</td>
+</tr>
+<tr class="odd">
+<td>Tags</td>
+<td>1,135</td>
+</tr>
+<tr class="even">
+<td>Note</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>Content</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ul>
+<li><a href="https://mymind.helpscoutdocs.com/article/51-how-to-use-tagging-in-mymind">How to use tagging in mymind</a></li>
+<li><a href="https://skywork.ai/skypage/en/mymind-Your-AI-Powered-Digital-Brain-%E2%80%93-A-Comprehensive-Guide-for-AI-Enthusiasts/1972840147367030784">mymind - Comprehensive Guide (Skywork)</a></li>
+<li><a href="https://mymind.com/what">mymind - What is it?</a></li>
+<li><a href="https://nesslabs.com/mymind-featured-tool">Building an extension of your mind with mymind (Ness Labs)</a></li>
+</ul>
+</section>
+</section>
+<p><br>
+</p>
+<p>From subsequent conversations, the best way to do this is to create an LLM running locally (Ollama). I don’t want to embed it in this project because I want to be able to use it for other purposes. So I had Claude write up a plan for me and I’ll do this part later.</p>
+<p>My goal here is to show how I can go from an idea to a viable service. So after going to the terminal to create the Chrome extension and better understand LLM integration. I went back to the service manager and started working on different details. You can see that here:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://john.abumirchi.com/blog/2026_03-galaxy_brain/galaxy_brain-tickets-done.png" class="img-fluid figure-img"></p>
+<figcaption>Tickets I used to get the service to a decent state.</figcaption>
+</figure>
+</div>
+<p>Finally I reached a point where I can just start using Galaxy Brain (GB) and cancel my mymind subscription. In the video below you can see how the interface now works. You can also see how I can capture a webpage using the Chrome extension. When I go back to the GB service you see the webpage archived and embedded in the card.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1170526052?h=bb7f026479" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+ ]]></description>
+  <category>Claude Code</category>
+  <category>Service Manager</category>
+  <guid>https://john.abumirchi.com/blog/2026_03-galaxy_brain/</guid>
+  <pubDate>Thu, 05 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://john.abumirchi.com/resources/transparent.png" medium="image" type="image/png" height="1" width="1"/>
+</item>
+<item>
+  <title>Mo Services, Mo Problems</title>
+  <dc:creator>John </dc:creator>
+  <link>https://john.abumirchi.com/blog/2026_03_02-service_manager/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>As I started using Claude Code, I must confess that I found it pretty exciting. I had more ideas than mental capacity to deal with them. I’d send Claude off on a task and then I’d think: You know, I’ve always wanted to… And then I start another project. Then I’d go back to a previous project and think: OK where was I? Oh yes now I remember. But after a while it became a little unmanageable. So I thought: You know I should really have Claude manage this for me.</p>
+<p>So I started another project. This time in a space parallel to my current projects. I opened the CLAUDE.md file in the service manager directory and started typing. I had Claude build it, and then I refined it until I had this (content warning, service tickets are involved):</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169766119?h=ef9ed10d84" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>What you’re looking at is a dashboard of the different services. It indicates if the service is up and healthy. If I want to work on that service, I can go to it and from there I can create tickets. If you work in corporate America this may be traumatic (but you were warned). The way service tickets work is you can just type in what you want Claude to do. Set Autopilot to true, and click Create. You can do other work and come back later to see the status of things.</p>
+<p>In this instance I saw how something in my note taking app was working and I wanted to change it. So I typed in what I was looking for and sent it on it’s way. You’ll notice it didn’t quite work the way I wanted, so I reopened the ticket to clarify.</p>
+<p>There are different levels of interaction. For small things like this, I’ll just use a ticket. If I want to have a longer discussion about it, you see the claude interface is embedded directly in that services details page. And if its even more involved, I’ll just open a prompt on the server.</p>
+<p>I can use this to monitor how many tokens I’m using. The dollar amounts are not really relevant because I’m using a monthly plan. Those amounts relate to how much it would cost if I were just buying tokens.</p>
+<p>The service manager will also monitor the services. If they go down, it will create a ticket with autopilot set to fix the broken service. For example I had to increase the memory Docker could use. When Docker restarted it left some of the services in a bad state. You can see the errors that were generated below in the first tab. You can see the ticket that was generated and the container for the shiny_server was restarted and the problem fixed.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Service Notifications</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Automated Ticket Generated</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<p><img src="https://john.abumirchi.com/blog/2026_03_02-service_manager/health_monitor-notifications.png" class="img-fluid"></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<p><img src="https://john.abumirchi.com/blog/2026_03_02-service_manager/health_monitor-ticket.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>Claude Code</category>
+  <category>Service Manager</category>
+  <guid>https://john.abumirchi.com/blog/2026_03_02-service_manager/</guid>
+  <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://john.abumirchi.com/resources/transparent.png" medium="image" type="image/png" height="1" width="1"/>
 </item>
 <item>
   <title>Take back of the Internet</title>
@@ -151,8 +312,8 @@ Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Vid
 
 
  ]]></description>
-  <category>Science</category>
-  <category>Data</category>
+  <category>Empowerment</category>
+  <category>Personal Data</category>
   <guid>https://john.abumirchi.com/blog/2026_02_28-overview/</guid>
   <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
 </item>
