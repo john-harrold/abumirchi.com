@@ -3,7 +3,7 @@ title: "Mo Services, Mo Problems"
 description: |-
   At one point I found myself with four different terminals open. I was trying to implement things in four different projects. I'll be honest, I was getting confused. Oh where are the project managers when you need them?
 author: John
-date: "2026.03.02"
+date: "2026-03-02"
 draft: false 
 image: "/resources/transparent.png"
 categories:

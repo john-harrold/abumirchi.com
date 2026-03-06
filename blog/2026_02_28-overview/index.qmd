@@ -2,12 +2,12 @@
 title: "Take back of the Internet"
 description: "I know AI is being pushed on you from every direction, but it can also be used to defend yourself. You may not be a programmer but you can create software that works for you and doesn't just extract from you."
 author: "John"
-date: "2026.02.28"
+date: "2026-02-28"
 #image: "cover.jpg"
 draft: false
 categories:
-  - Science
-  - Data
+  - Empowerment
+  - Personal Data
 ---
 
 Bluesky is where I prefer to do my social mediaing. Like most sites it has a particular perspective on things and the overwhelming attitude towards AI is something along the lines of: Industrial plagiarism machine. Most of this is due to how AI is encountered. It's filling all of our social media feeds, google search results are garbage now, creepy folks are using with their personal surveilance glassed to be creeps in public. All these things are true. The refrain you hear from many folks is: AI is only good at programming, I'm not a programmer, and I want nothing to do with it.
