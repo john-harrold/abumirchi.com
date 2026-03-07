@@ -37,6 +37,12 @@ $code-color: $chocolate-brown;
 
 /*-- scss:rules --*/
 
+// Make videos wider than body column
+.quarto-video {
+  width: 200%;
+  margin-left: -50%;
+}
+
 // Retro typography feel
 body {
   font-family: 'Optima', 'Candara', 'Noto Sans', 'source-sans-pro', sans-serif;

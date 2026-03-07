@@ -56,7 +56,7 @@ As an aside: In my day job I deal with clinical data so this wasn't really that 
 
 Now I have all of my watch lists, previously viewed titles, and my ratings all together. With this I can make some sense of my watch lists. I had both of the watch lists from Netflix and Amazon dumped into a default list. It's pretty big (about 815 titles), so I told Claude I want to be able to filter and sort things. I can switch to only a TV or Movie view. Depending on who is watching I can pull filter based on content rating. I can also group the titles based on genre:
 
-{{< video https://vimeo.com/1169229477/8927da376d >}}
+{{< video https://vimeo.com/1169229477/8927da376d >}}     
 
 If I find something I'm interested in I can view the details. The format of how this looks can be constructed however I want. In this case I've retained the rating and list management widgets. I also have a list of streaming sites with links to search for this title at those sites. With those links I can easily jump to streaming the title. If I'm looking for similar title, I had the service populate a bunch of options for me. I also had it go out and embed trailers for the title. 
 
