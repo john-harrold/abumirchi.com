@@ -42,7 +42,9 @@ Then I went to my service management interface, told it to rediscover services.
 It found the "galaxy_brain" service, and I told it to build the service.
 
 
+::: {.video-normal}
 {{< video https://vimeo.com/1169352148/5b59cdcd97?share=copy&fl=sv&fe=ci >}}
+:::
 
 *I'm using the service manager here, but you could just open Claude in that
 directory and give it the same prompt to do the same thing.*
@@ -116,4 +118,6 @@ My goal here is to show how I can go from an idea to a viable service. So after 
 
 Finally I reached a point where I can just start using Galaxy Brain (GB) and cancel my mymind subscription. In the video below you can see how the interface now works. You can also see how I can capture a webpage using the Chrome extension. When I go back to the GB service you see the webpage archived and embedded in the card. 
 
+::: {.video-normal}
 {{< video https://vimeo.com/1170526052/bb7f026479?share=copy&fl=sv&fe=ci >}}
+:::

@@ -43,6 +43,13 @@ $code-color: $chocolate-brown;
   margin-left: -50%;
 }
 
+// Normal-width video override
+.video-normal .quarto-video,
+.panel-tabset .quarto-video {
+  width: 100%;
+  margin-left: 0;
+}
+
 // Retro typography feel
 body {
   font-family: 'Optima', 'Candara', 'Noto Sans', 'source-sans-pro', sans-serif;
