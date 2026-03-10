@@ -93,7 +93,9 @@ Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Vid
 <p>I would like to have a web interface running on the server where all the files are stored. I should be able to create new cards here with the option of embedding files, if a url is supplied it should try to capture and archive the contents of that url. Start with something similar to mymind and I can customize it from there. Initialize the system with the data in mymind_export.</p>
 </blockquote>
 <p>The export I got from mymind was unzipped into the mymind_export sub directory. Then I went to my service management interface, told it to rediscover services. It found the “galaxy_brain” service, and I told it to build the service.</p>
+<div class="video-normal">
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169352148?h=5b59cdcd97" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
 <p><em>I’m using the service manager here, but you could just open Claude in that directory and give it the same prompt to do the same thing.</em></p>
 <p>And about 18 minutes later it was done. If you look at the “Initial Service” Video you can see what it looks like. All those things at the top? Those are tags. Some I created but the vast majority were automatically created by mymind when things were imported the different assets.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -226,7 +228,9 @@ Figure&nbsp;1: Examples of watch lists exported from Netflix (top) and Prime Vid
 </figure>
 </div>
 <p>Finally I reached a point where I can just start using Galaxy Brain (GB) and cancel my mymind subscription. In the video below you can see how the interface now works. You can also see how I can capture a webpage using the Chrome extension. When I go back to the GB service you see the webpage archived and embedded in the card.</p>
+<div class="video-normal">
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1170526052?h=bb7f026479" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
 
 
 
