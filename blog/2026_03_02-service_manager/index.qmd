@@ -23,7 +23,9 @@ projects. I opened the CLAUDE.md file in the service manager directory and
 started typing. I had Claude build it, and then I refined it until I had this
 (content warning, service tickets are involved): 
 
+::: {.video-normal}
 {{< video https://vimeo.com/1169766119/ef9ed10d84 >}}
+:::
 
 What you're looking at is a dashboard of the different services. It indicates if
 the service is up and healthy. If I want to work on that service, I can go to it
