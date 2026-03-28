@@ -1,7 +1,7 @@
 ---
 title: "Turning mymind into a Galaxy Brain"
 description: |-
-  Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it running locally. 
+  Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it with my own version running locally. 
 author: John
 date: "2026-03-05"
 draft: false

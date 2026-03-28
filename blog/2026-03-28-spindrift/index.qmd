@@ -1,0 +1,64 @@
+---
+title: "Making your own software"
+description: |-
+  Large traditional software companies are excited to fire their engineers and replace them with AI. You can be excited to fire the software companies and replace them with AI. Their engineers can be excited to use AI to replace the large traditional software companies. 
+author: John
+date: "2026.03.28"
+draft: false 
+#image: "cover.jpg"
+#image: "/resources/transparent.png"
+categories:
+  - PDF    
+  - Adobe
+  - Claude Code
+---
+
+## Introduction 
+
+When I started using Claude Code I tried to think of the implications of this tool on different industries. It's easiest to think about the software industry. I think many companies think: Look we can use this to to replace the programmers we would normally pay. I started thinking: Look I can use this tool to replace software companies that sell me software. It's a theory, so I thought what would be a good way to test this theory? Why not Adobe Acrobat?
+
+Historically I used Adobe Acrobat Pro and the subscription cost about $250 a year. I didn't really use all of the features in Acrobat. There were a few that the Preivew mac app either didn't do, or didn't do to my liking. There were also features that were completely missing from both. So my goal was to build an application that would first do what Acrobat and Preview did that I liked. Then I would add the features that I wanted on top of that. 
+
+So I told Claude what I wanted to do. Most of what I'd done up to this point was creating web services but this time I told Claude I wanted a native macOS app. It told me it would build it in Swift, something I'd never used before. 
+
+## Replacing what I do in Preview and Acrobat
+
+The first thing that I did was recreate what I already had access to. But I did it in such a way that the interface was simple and consistent. It's not even consistent in Preview. You may not like the choices I made here, but that's OK you can Claude Code your own app. Here you can see the features that currently exist in Preview and Acrobat that I like. This video shows how to markup text, insert and format text boxes, and draw different elements. Beyond that I can also do things like runs OCR on image-based PDFs and group PDFs into collections. Both currently supported in Acrobat. Likewise I can add comments like both Acrobat and Preview support. 
+
+::: {.video-normal}
+{{< video https://vimeo.com/1178012858 >}}     
+:::
+
+## Changing how features work
+
+There are certain features that exist in Preview and/or Acrobat that just don't work well for me. For example there are stamps in Acrobat that I've used in the past to put my signature on documents. Stamps require my signature to be on a transparent background. Which is kind of a process to make. Preview offers something similar: You can sign a space using a trackpad, you can sign it on your apple phone or scan a picture of your signature using the Mac camera. I prefer to just sign a piece of paper and take a picture of it. It's just more straight forward to do it this way. So when I implemented this feature I created it to allow me to either upload my signature as png or PDF with a transparent background or an image of my signature. This video shows the latter:
+
+::: {.video-normal}
+{{< video https://vimeo.com/1178012895 >}}     
+:::
+
+## Creating new features
+
+Lastly there are features that I would like but Adobe and Apple have no incentive to add. For example in my work I often have to extract tabular data from PDFs. Some PDFs are newer and have a well defined internal structure. Some are scanned in papers from 70 years ago. So I spent a lot of time working with Claude Code to develop both manual and automatic detection of tables. There are different autodetection methods that are available as well depending on the document type (images vs native PDF pages) and how the tables are formatted. And also detection of rows and columns within tables. That got me most of the way there, but then I also had Claude Code develop a view where I could make adjustments in those detected rows and columns. The result is better than anything I've seen commercially. You can see how it works here:
+
+::: {.video-normal}
+{{< video https://vimeo.com/1178012937 >}}     
+:::
+
+This is a tool that will be very useful to me. 
+
+##  Some thoughts 
+
+This is more a proof of concept than anything else. But for me at least, it has proved the concept. This year I put together all of my tax documents that I would have normally done with Acrobat using the Spindrift tool I built. A couple weeks ago I canceled my Acrobat subscription just before renewal. If you find this interesting you can give it a try yourself. I put the project on GitHub and you can [install spindrift](https://github.com/john-harrold/spindrift/releases/tag/nightly) using a signed dmg.  There are probably bugs and odd behaviors. Feel free to put in a bug report. I'll try to address them because I intend to keep using this. If you want you can download it and add your own features. Feel free to submit pull requests.
+
+## Arguments:
+
+Here are some arguments I've heard and my thoughts on them:
+
+*People don't want to do this, they just want to buy software and install it*  
+
+I'm not suggesting everyone download and install claude code. What I think can happen is that there will be people who are good at this. I'm not suggesting that I am good at this. I can see an engineer, an artist, and other creative folks getting together to create software the way open source projects have traditionally. The potential is there to make software at a scale that only large companies could have managed in the past. If they give it away for free then thats great. But the could also just sell it substantially cheaper. They will only have to support themselves and wont' be beholden to quarterly reports like a publicly traded company. 
+
+*Are we going to replace all software companies?* 
+
+No of course not. I think these older more established software companies are thinking of a world where they have the same profits but have a small fraction of the workforce. I think the people they are laying off right now can utilize the same AI tools to create their own software and significantly undercut the companies they once worked for.

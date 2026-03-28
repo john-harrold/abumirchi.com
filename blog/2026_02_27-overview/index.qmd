@@ -2,7 +2,7 @@
 title: "Take back of the Internet"
 description: "I know AI is being pushed on you from every direction, but it can also be used to defend yourself. You may not be a programmer but you can create software that works for you and doesn't just extract from you."
 author: "John"
-date: "2026-02-28"
+date: "2026-02-27"
 #image: "cover.jpg"
 draft: false
 categories:
@@ -10,9 +10,9 @@ categories:
   - Personal Data
 ---
 
-Bluesky is where I prefer to do my social mediaing. Like most sites it has a particular perspective on things and the overwhelming attitude towards AI is something along the lines of: Industrial plagiarism machine. Most of this is due to how AI is encountered. It's filling all of our social media feeds, google search results are garbage now, creepy folks are using with their personal surveilance glassed to be creeps in public. All these things are true. The refrain you hear from many folks is: AI is only good at programming, I'm not a programmer, and I want nothing to do with it.
+Bluesky is where I prefer to do my social mediaing. Like most sites it has a particular perspective on things and the overwhelming attitude towards AI is something along the lines of: Industrial plagiarism machine. Most of this is due to how AI is encountered. It's filling all of our social media feeds, google search results are garbage now, creepy folks are using with their personal surveillance glassed to be creeps in public. All these things are true. The refrain you hear from many folks is: AI is only good at programming, I'm not a programmer, and I want nothing to do with it.
 
-You may not be a programmer, but you most certainly use software. Software is largely created by large corporations and most of us are consumers. We wait for companies to release it and then we use it. If it doesnt work or just works poorly, we may complain about it. However, most companies are too large and the software they produce is targets broad audience, so our suggestions/greiviences are not likely to gain any traction. 
+You may not be a programmer, but you most certainly use software. Software is largely created by large corporations and most of us are consumers. We wait for companies to release it and then we use it. If it doesn't work or just works poorly, we may complain about it. However, most companies are too large and the software they produce is targets broad audience, so our suggestions/grievances are not likely to gain any traction. 
 
 So what is a non-programmer to do?
 
@@ -34,8 +34,8 @@ If you're interested in doing this yourself, this is how you can get started if 
 - Xcode
 - Docker Desktop
 - An IDE like vscode or positron
-- Brew [brew.sh](http://brew.sh) - This is aone liner you copy/paste into the terminal
-- Claude Code of course - The pro subscruption costs $20/month or $200/year
+- Brew [brew.sh](http://brew.sh) - This is one liner you copy/paste into the terminal
+- Claude Code of course - The pro subscription costs $20/month or $200/year
 
 
 You don't have to have an IDE. It's convenient if you want so see how the code changes as Claude works. Both vscode and positron have a terminal built in. If you don't use an IDE you can use the macos terminal. 
