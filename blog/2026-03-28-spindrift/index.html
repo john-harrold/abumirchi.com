@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="John">
-<meta name="dcterms.date" content="2026-03-05">
-<meta name="description" content="Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it with my own version running locally.">
+<meta name="dcterms.date" content="2026-03-28">
+<meta name="description" content="Large traditional software companies are excited to fire their engineers and replace them with AI. You can be excited to fire the software companies and replace them with AI. Their engineers can be excited to use AI to replace the large traditional software companies.">
 
-<title>Turning mymind into a Galaxy Brain – 🌶️</title>
+<title>Making your own software – 🌶️</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,12 +75,9 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Turning mymind into a Galaxy Brain – 🌶️">
-<meta property="og:description" content="Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it with my own version running locally.">
-<meta property="og:image" content="https://john.abumirchi.com/resources/transparent.png">
+<meta property="og:title" content="Making your own software – 🌶️">
+<meta property="og:description" content="Large traditional software companies are excited to fire their engineers and replace them with AI. You can be excited to fire the software companies and replace them with AI. Their engineers can be excited to use AI to replace the large traditional software companies.">
 <meta property="og:site_name" content="🌶️">
-<meta property="og:image:height" content="1">
-<meta property="og:image:width" content="1">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -129,16 +126,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Turning mymind into a Galaxy Brain</h1>
+<h1 class="title">Making your own software</h1>
   <div class="quarto-categories">
+    <div class="quarto-category">PDF</div>
+    <div class="quarto-category">Adobe</div>
     <div class="quarto-category">Claude Code</div>
-    <div class="quarto-category">Service Manager</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Some folks might find this all very daunting. What I want to do here is show you how I recreated a service I personally use so I could replace it with my own version running locally.
+    Large traditional software companies are excited to fire their engineers and replace them with AI. You can be excited to fire the software companies and replace them with AI. Their engineers can be excited to use AI to replace the large traditional software companies.
   </div>
 </div>
 
@@ -155,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 5, 2026</p>
+      <p class="date">March 28, 2026</p>
     </div>
   </div>
   
@@ -167,153 +165,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I use something called mymind for clipping things I find useful. It’s nice, it integrates into my phone, Chrome, Safari. It dumps everything into a database with tagging. It’s searchable. But it’s all kind of stuck on their servers. You can export it, but it’s not very useful to me there. I want it to be more useful. I thought it would be helpful if I documented how I could reproduce this service by showing the process of going from the initial prompt to something usable.</p>
-<p>I created a directory in my directory of services. In that directory, I created a CLAUDE.md file with the following:</p>
-<blockquote class="blockquote">
-<p>I want to create a service like mymind for clipping information as I encounter it on the internet. I would like to be able to setup a secure means of encrypting and saving data outside my home, have it securely transferred home and stored there permanently. I want to be able to capture urls and archives of the web pages. I think using an extension in Chrome or Safari. Lets start on my laptop. Have it save the files locally and transfer them when done.</p>
-<p>I would like to have a web interface running on the server where all the files are stored. I should be able to create new cards here with the option of embedding files, if a url is supplied it should try to capture and archive the contents of that url. Start with something similar to mymind and I can customize it from there. Initialize the system with the data in mymind_export.</p>
-</blockquote>
-<p>The export I got from mymind was unzipped into the mymind_export sub directory. Then I went to my service management interface, told it to rediscover services. It found the “galaxy_brain” service, and I told it to build the service.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>When I started using Claude Code I tried to think of the implications of this tool on different industries. It’s easiest to think about the software industry. I think many companies think: Look we can use this to to replace the programmers we would normally pay. I started thinking: Look I can use this tool to replace software companies that sell me software. It’s a theory, so I thought what would be a good way to test this theory? Why not Adobe Acrobat?</p>
+<p>Historically I used Adobe Acrobat Pro and the subscription cost about $250 a year. I didn’t really use all of the features in Acrobat. There were a few that the Preivew mac app either didn’t do, or didn’t do to my liking. There were also features that were completely missing from both. So my goal was to build an application that would first do what Acrobat and Preview did that I liked. Then I would add the features that I wanted on top of that.</p>
+<p>So I told Claude what I wanted to do. Most of what I’d done up to this point was creating web services but this time I told Claude I wanted a native macOS app. It told me it would build it in Swift, something I’d never used before.</p>
+</section>
+<section id="replacing-what-i-do-in-preview-and-acrobat" class="level2">
+<h2 class="anchored" data-anchor-id="replacing-what-i-do-in-preview-and-acrobat">Replacing what I do in Preview and Acrobat</h2>
+<p>The first thing that I did was recreate what I already had access to. But I did it in such a way that the interface was simple and consistent. It’s not even consistent in Preview. You may not like the choices I made here, but that’s OK you can Claude Code your own app. Here you can see the features that currently exist in Preview and Acrobat that I like. This video shows how to markup text, insert and format text boxes, and draw different elements. Beyond that I can also do things like runs OCR on image-based PDFs and group PDFs into collections. Both currently supported in Acrobat. Likewise I can add comments like both Acrobat and Preview support.</p>
 <div class="video-normal">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169352148?h=5b59cdcd97" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1178012858" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
-<p><em>I’m using the service manager here, but you could just open Claude in that directory and give it the same prompt to do the same thing.</em></p>
-<p>And about 18 minutes later it was done. If you look at the “Initial Service” Video you can see what it looks like. All those things at the top? Those are tags. Some I created but the vast majority were automatically created by mymind when things were imported the different assets.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Ticket Details</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Initial Service</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><img src="galaxy_brain-built.png" class="img-fluid"></p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169361225?h=84acc675d5" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-</div>
-</div>
-<p>The first thing I want to do is clean this up a bit. So I went to the service manager and submitted the following ticket:</p>
-<blockquote class="blockquote">
-<p>I don’t want all of the tags to show. I want to be able to type into the search box and have it show the tags that match and allow me to auto-complete a tag. When it’s auto completed, I want the tag to appear under the search box with an x to remove it. I also want to be able to type in free text in the search box to further filter things. I also want the service to create previews for known services like Blueksy or Twitter. I want to do this on import and save this information. That way it doesn’t have to generate it on the fly.</p>
-</blockquote>
-<p>You can see me doing this in the video below. I submitted this ticket and in about 12 minutes it was done. You can see what it looks like in the “Result of First Revision” tab below:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Ticket First Revision</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Result of First Revision</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169370413?h=4048cefed9" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1169370422?h=67d8e11587" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-</div>
-</div>
-<p>For me this looks a lot better. You’ll notice the main categories at the top for Article, Webpage, Xpost, etc. I didn’t even notice them at first, but I think they will be useful. I’ll need to clean them up a bit to suit me. I’ll also probably want to make some smaller tweaks. But that can be done by adding more tickets. You can see how straight forward this is. If a ticket doesn’t do what I want, I can reopen it at the bottom and prompt it with more details. Sometimes I have to do this because I wasn’t specific enough at first.</p>
-<p>If I want a more interactive/back and forth with Claude, I can go to a terminal. I can do it on the computer (which is what I typically do if it’s going to be a long discussion), or I can do it in the service manager for shorter conversations (it has a terminal embedded in each service). In this case I wanted to talk about Chrome extensions since I have no familiarity with it. I had Claude create the extension such that if I’m connected to the network it will save the card directly to the server. If I’m not connected it will save it locally on my computer and sync it later. I also had it embed a download for the extension in the app with instructions on how to use it:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="galaxy_brain-extension.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of the extension page with a link to download and instructions on use.</figcaption>
-</figure>
-</div>
-<p>Mymind does some automatic processing when a card is added. I don’t really want to replace all of that functionality, but there is some that is useful. So I went to the terminal to asked Claude to explain what it can about the process mymind goes through:</p>
-<blockquote class="blockquote">
-<p>When cards are imported they can have user notes and user defined tags. The current cards came mostly from my mind. It would attach other metadata upon import. For example it would add tags on its own. It would also apply a grouping (e.g.&nbsp;Article, Image, Document, etc.). Can you research they type of metadata that mymind would attach?</p>
-</blockquote>
-<p>It provided me with a bunch of information, I had it save it in Markdown below so you can read it:</p>
-<section id="mymind-auto-generated-metadata" class="level1" style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 1em;">
-<h1>mymind Auto-Generated Metadata</h1>
-<section id="content-type-classification" class="level2">
-<h2 class="anchored" data-anchor-id="content-type-classification">1. Content Type Classification</h2>
-<p>mymind categorizes every item into a type. The export shows 18 distinct types: - <strong>XPost</strong> (489), <strong>Article</strong> (282), <strong>WebPage</strong> (207), <strong>Post</strong> (127), <strong>Product</strong> (89), <strong>Image</strong> (40), <strong>Document</strong> (18), <strong>Embed</strong> (13), <strong>YouTubeVideo</strong> (12), <strong>Repository</strong> (11), <strong>RedditPost</strong> (7), <strong>BlueskyPost</strong> (5), <strong>Issue</strong> (4), <strong>WikipediaArticle</strong> (2), <strong>Note</strong>, <strong>Content</strong>, <strong>MusicRecording</strong>, <strong>TikTokPost</strong> (1 each)</p>
 </section>
-<section id="ai-visual-recognition-tags-computer-vision" class="level2">
-<h2 class="anchored" data-anchor-id="ai-visual-recognition-tags-computer-vision">2. AI Visual Recognition Tags (computer vision)</h2>
-<p>For images and products, mymind runs <strong>computer vision</strong> to detect: - <strong>Objects</strong>: <code>faucets</code>, <code>ring binder</code>, <code>bathtub</code>, <code>plant</code>, <code>drawer</code> - <strong>Colors</strong>: <code>electric blue</code>, <code>magenta</code>, <code>violet</code>, <code>silver</code>, <code>monochrome</code> - <strong>Materials</strong>: <code>metal</code>, <code>aluminium</code>, <code>titanium</code>, <code>brass</code>, <code>wood</code> - <strong>Design attributes</strong>: <code>product design</code>, <code>graphic design</code>, <code>font</code>, <code>logo</code>, <code>brand</code> - <strong>Visual properties</strong>: <code>flash photography</code>, <code>neon sign</code>, <code>atmospheric phenomenon</code></p>
-<p>These cards often have <strong>10-46 tags</strong> each. In the data, 286 cards have &gt;10 tags (mostly auto-visual).</p>
-</section>
-<section id="ocr-optical-character-recognition" class="level2">
-<h2 class="anchored" data-anchor-id="ocr-optical-character-recognition">3. OCR (Optical Character Recognition)</h2>
-<p>mymind reads text within images — screenshots, memes, diagrams — and indexes that text so you can search for words appearing inside images.</p>
-</section>
-<section id="article-summaries" class="level2">
-<h2 class="anchored" data-anchor-id="article-summaries">4. Article Summaries</h2>
-<p>For web pages and articles, mymind generates a short paragraph summary of the content (this appears in the <code>content</code> field, though the export has very few populated).</p>
-</section>
-<section id="smart-card-extraction" class="level2">
-<h2 class="anchored" data-anchor-id="smart-card-extraction">5. Smart Card Extraction</h2>
-<p>For specific content types, it extracts structured metadata: - <strong>Books</strong>: cover image, author, title - <strong>Products</strong>: product image, brand, price info - <strong>Music</strong>: artist, album info - <strong>Recipes</strong>: specialized formatting</p>
-</section>
-<section id="color-search-index" class="level2">
-<h2 class="anchored" data-anchor-id="color-search-index">6. Color Search Index</h2>
-<p>Beyond tagging colors by name, mymind builds a <strong>visual color index</strong> so you can filter by hue (e.g., “show me all blue images”).</p>
-</section>
-<section id="user-tags-vs-auto-tags" class="level2">
-<h2 class="anchored" data-anchor-id="user-tags-vs-auto-tags">User Tags vs Auto Tags</h2>
-<p>In the data, the distinction is clear: - <strong>User tags</strong> (&lt;=5 per card, 672 cards): semantic/topical — <code>read later</code>, <code>Ukraine</code>, <code>rstats</code>, <code>cancel culture</code>, <code>new music</code> - <strong>Auto tags</strong> (&gt;10 per card, 286 cards): visual descriptors — <code>electric blue,technology,poster,magenta,art,font,display device,signage</code></p>
-<p>mymind shows these separately in its UI (labeled “auto-tags” vs user tags).</p>
-</section>
-<section id="whats-in-the-export" class="level2">
-<h2 class="anchored" data-anchor-id="whats-in-the-export">What’s in the Export</h2>
-<p>The CSV has 8 fields: <code>id, type, title, url, content, note, tags, created</code>. The auto-tags and user-tags are <strong>mixed together</strong> in the <code>tags</code> column with no way to distinguish them in the export. Only 13 cards have user notes, and only 2 have content populated.</p>
-<section id="field-population-1310-cards" class="level3">
-<h3 class="anchored" data-anchor-id="field-population-1310-cards">Field Population (1,310 cards)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Field</th>
-<th>Populated</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Title</td>
-<td>1,173</td>
-</tr>
-<tr class="even">
-<td>URL</td>
-<td>1,261</td>
-</tr>
-<tr class="odd">
-<td>Tags</td>
-<td>1,135</td>
-</tr>
-<tr class="even">
-<td>Note</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>Content</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="sources" class="level2">
-<h2 class="anchored" data-anchor-id="sources">Sources</h2>
-<ul>
-<li><a href="https://mymind.helpscoutdocs.com/article/51-how-to-use-tagging-in-mymind">How to use tagging in mymind</a></li>
-<li><a href="https://skywork.ai/skypage/en/mymind-Your-AI-Powered-Digital-Brain-%E2%80%93-A-Comprehensive-Guide-for-AI-Enthusiasts/1972840147367030784">mymind - Comprehensive Guide (Skywork)</a></li>
-<li><a href="https://mymind.com/what">mymind - What is it?</a></li>
-<li><a href="https://nesslabs.com/mymind-featured-tool">Building an extension of your mind with mymind (Ness Labs)</a></li>
-</ul>
-</section>
-</section>
-<p><br>
-</p>
-<p>From subsequent conversations, the best way to do this is to create an LLM running locally (Ollama). I don’t want to embed it in this project because I want to be able to use it for other purposes. So I had Claude write up a plan for me and I’ll do this part later.</p>
-<p>My goal here is to show how I can go from an idea to a viable service. So after going to the terminal to create the Chrome extension and better understand LLM integration. I went back to the service manager and started working on different details. You can see that here:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="galaxy_brain-tickets-done.png" class="img-fluid figure-img"></p>
-<figcaption>Tickets I used to get the service to a decent state.</figcaption>
-</figure>
-</div>
-<p>Finally I reached a point where I can just start using Galaxy Brain (GB) and cancel my mymind subscription. In the video below you can see how the interface now works. You can also see how I can capture a webpage using the Chrome extension. When I go back to the GB service you see the webpage archived and embedded in the card.</p>
+<section id="changing-how-features-work" class="level2">
+<h2 class="anchored" data-anchor-id="changing-how-features-work">Changing how features work</h2>
+<p>There are certain features that exist in Preview and/or Acrobat that just don’t work well for me. For example there are stamps in Acrobat that I’ve used in the past to put my signature on documents. Stamps require my signature to be on a transparent background. Which is kind of a process to make. Preview offers something similar: You can sign a space using a trackpad, you can sign it on your apple phone or scan a picture of your signature using the Mac camera. I prefer to just sign a piece of paper and take a picture of it. It’s just more straight forward to do it this way. So when I implemented this feature I created it to allow me to either upload my signature as png or PDF with a transparent background or an image of my signature. This video shows the latter:</p>
 <div class="video-normal">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1170526052?h=bb7f026479" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1178012895" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
+</section>
+<section id="creating-new-features" class="level2">
+<h2 class="anchored" data-anchor-id="creating-new-features">Creating new features</h2>
+<p>Lastly there are features that I would like but Adobe and Apple have no incentive to add. For example in my work I often have to extract tabular data from PDFs. Some PDFs are newer and have a well defined internal structure. Some are scanned in papers from 70 years ago. So I spent a lot of time working with Claude Code to develop both manual and automatic detection of tables. There are different autodetection methods that are available as well depending on the document type (images vs native PDF pages) and how the tables are formatted. And also detection of rows and columns within tables. That got me most of the way there, but then I also had Claude Code develop a view where I could make adjustments in those detected rows and columns. The result is better than anything I’ve seen commercially. You can see how it works here:</p>
+<div class="video-normal">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1178012937" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<p>This is a tool that will be very useful to me.</p>
+</section>
+<section id="some-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="some-thoughts">Some thoughts</h2>
+<p>This is more a proof of concept than anything else. But for me at least, it has proved the concept. This year I put together all of my tax documents that I would have normally done with Acrobat using the Spindrift tool I built. A couple weeks ago I canceled my Acrobat subscription just before renewal. If you find this interesting you can give it a try yourself. I put the project on GitHub and you can <a href="https://github.com/john-harrold/spindrift/releases/tag/nightly">install spindrift</a> using a signed dmg. There are probably bugs and odd behaviors. Feel free to put in a bug report. I’ll try to address them because I intend to keep using this. If you want you can download it and add your own features. Feel free to submit pull requests.</p>
+</section>
+<section id="arguments" class="level2">
+<h2 class="anchored" data-anchor-id="arguments">Arguments:</h2>
+<p>Here are some arguments I’ve heard and my thoughts on them:</p>
+<p><em>People don’t want to do this, they just want to buy software and install it</em></p>
+<p>I’m not suggesting everyone download and install claude code. What I think can happen is that there will be people who are good at this. I’m not suggesting that I am good at this. I can see an engineer, an artist, and other creative folks getting together to create software the way open source projects have traditionally. The potential is there to make software at a scale that only large companies could have managed in the past. If they give it away for free then thats great. But the could also just sell it substantially cheaper. They will only have to support themselves and wont’ be beholden to quarterly reports like a publicly traded company.</p>
+<p><em>Are we going to replace all software companies?</em></p>
+<p>No of course not. I think these older more established software companies are thinking of a world where they have the same profits but have a small fraction of the workforce. I think the people they are laying off right now can utilize the same AI tools to create their own software and significantly undercut the companies they once worked for.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
