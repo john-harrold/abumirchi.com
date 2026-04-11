@@ -5,7 +5,7 @@ description: |-
 author: John
 date: "2026.03.28"
 draft: false 
-#image: "cover.jpg"
+image: "spindrift-landing.png"
 #image: "/resources/transparent.png"
 categories:
   - PDF    
@@ -39,7 +39,7 @@ There are certain features that exist in Preview and/or Acrobat that just don't 
 
 ## Creating new features
 
-Lastly there are features that I would like but Adobe and Apple have no incentive to add. For example in my work I often have to extract tabular data from PDFs. Some PDFs are newer and have a well defined internal structure. Some are scanned in papers from 70 years ago. So I spent a lot of time working with Claude Code to develop both manual and automatic detection of tables. There are different autodetection methods that are available as well depending on the document type (images vs native PDF pages) and how the tables are formatted. And also detection of rows and columns within tables. That got me most of the way there, but then I also had Claude Code develop a view where I could make adjustments in those detected rows and columns. The result is better than anything I've seen commercially. You can see how it works here:
+Lastly there are features that I would like but Adobe and Apple have no incentive to add. For example in my work I often have to extract tabular data from PDFs. Some PDFs are newer and have a well defined internal structure. Some are scanned in papers from 70 years ago. So I spent a lot of time working with Claude Code to develop both manual and automatic detection of tables (A lot of time with Claude Code here is about 3 hours). There are different autodetection methods that are available as well depending on the document type (images vs native PDF pages) and how the tables are formatted. And also detection of rows and columns within tables. That got me most of the way there, but then I also had Claude Code develop a view where I could make adjustments in those detected rows and columns. The result is better than anything I've seen commercially. You can see how it works here:
 
 ::: {.video-normal}
 {{< video https://vimeo.com/1178012937 >}}     
