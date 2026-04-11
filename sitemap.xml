@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://john.abumirchi.com/cv/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.601Z</lastmod>
-  </url>
-  <url>
     <loc>https://john.abumirchi.com/experience/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.602Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john.abumirchi.com/extracurriculars/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.605Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john.abumirchi.com/blog/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.599Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john.abumirchi.com/blog/2026_03-galaxy_brain/mymind.html</loc>
-    <lastmod>2026-03-28T19:53:22.597Z</lastmod>
+    <lastmod>2026-04-11T19:48:47.150Z</lastmod>
   </url>
   <url>
     <loc>https://john.abumirchi.com/blog/2026-03-28-spindrift/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.589Z</lastmod>
+    <lastmod>2026-04-11T19:48:47.131Z</lastmod>
   </url>
   <url>
-    <loc>https://john.abumirchi.com/projects/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.607Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john.abumirchi.com/blog/2026_02_27-overview/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.589Z</lastmod>
-  </url>
-  <url>
-    <loc>https://john.abumirchi.com/blog/2026_02_28-streaming/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.589Z</lastmod>
+    <loc>https://john.abumirchi.com/blog/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.147Z</lastmod>
   </url>
   <url>
     <loc>https://john.abumirchi.com/blog/2026_03-galaxy_brain/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.597Z</lastmod>
+    <lastmod>2026-04-11T19:48:47.145Z</lastmod>
   </url>
   <url>
-    <loc>https://john.abumirchi.com/blog/2026_03_02-service_manager/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.599Z</lastmod>
+    <loc>https://john.abumirchi.com/blog/2026_02_28-streaming/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.137Z</lastmod>
   </url>
   <url>
-    <loc>https://john.abumirchi.com/index.html</loc>
-    <lastmod>2026-03-28T19:53:22.605Z</lastmod>
+    <loc>https://john.abumirchi.com/cv/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.148Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john.abumirchi.com/projects/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.155Z</lastmod>
   </url>
   <url>
     <loc>https://john.abumirchi.com/cv/cv.html</loc>
-    <lastmod>2026-03-28T19:53:22.601Z</lastmod>
+    <lastmod>2026-04-11T19:48:47.148Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john.abumirchi.com/extracurriculars/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john.abumirchi.com/blog/2026_02_27-overview/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.136Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john.abumirchi.com/blog/2026_03-galaxy_brain/mymind.html</loc>
+    <lastmod>2026-04-11T19:48:47.145Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john.abumirchi.com/blog/2026_03_02-service_manager/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://john.abumirchi.com/index.html</loc>
+    <lastmod>2026-04-11T19:48:47.153Z</lastmod>
   </url>
 </urlset>

@@ -9,7 +9,7 @@
 <link>https://john.abumirchi.com/blog/</link>
 <atom:link href="https://john.abumirchi.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.9.36</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Sat, 28 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Making your own software</title>
@@ -42,7 +42,7 @@
 </section>
 <section id="creating-new-features" class="level2">
 <h2 class="anchored" data-anchor-id="creating-new-features">Creating new features</h2>
-<p>Lastly there are features that I would like but Adobe and Apple have no incentive to add. For example in my work I often have to extract tabular data from PDFs. Some PDFs are newer and have a well defined internal structure. Some are scanned in papers from 70 years ago. So I spent a lot of time working with Claude Code to develop both manual and automatic detection of tables. There are different autodetection methods that are available as well depending on the document type (images vs native PDF pages) and how the tables are formatted. And also detection of rows and columns within tables. That got me most of the way there, but then I also had Claude Code develop a view where I could make adjustments in those detected rows and columns. The result is better than anything I’ve seen commercially. You can see how it works here:</p>
+<p>Lastly there are features that I would like but Adobe and Apple have no incentive to add. For example in my work I often have to extract tabular data from PDFs. Some PDFs are newer and have a well defined internal structure. Some are scanned in papers from 70 years ago. So I spent a lot of time working with Claude Code to develop both manual and automatic detection of tables (A lot of time with Claude Code here is about 3 hours). There are different autodetection methods that are available as well depending on the document type (images vs native PDF pages) and how the tables are formatted. And also detection of rows and columns within tables. That got me most of the way there, but then I also had Claude Code develop a view where I could make adjustments in those detected rows and columns. The result is better than anything I’ve seen commercially. You can see how it works here:</p>
 <div class="video-normal">
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/1178012937" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -69,6 +69,7 @@
   <category>Claude Code</category>
   <guid>https://john.abumirchi.com/blog/2026-03-28-spindrift/</guid>
   <pubDate>Sat, 28 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://john.abumirchi.com/blog/2026-03-28-spindrift/spindrift-landing.png" medium="image" type="image/png" height="68" width="144"/>
 </item>
 <item>
   <title>Turning mymind into a Galaxy Brain</title>
